@@ -1451,12 +1451,18 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
-    filter: drop-shadow(15px 5px 5px rgb(30, 29, 29));
-    border-radius: 50%
 }
 
 .img-rounded {
     border-radius: 6px
+}
+
+.img-responsive-firts{
+    filter: drop-shadow(15px 5px 5px rgb(30, 29, 29));
+    border-radius: 50%;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .img-thumbnail {
