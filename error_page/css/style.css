@@ -1,0 +1,275 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #fafafa;
+    font-size: 120px; /* Ajusta el tamaño de la fuente según tus necesidades */
+  }
+
+  .container-h1{
+    position: fixed; /* Opcional, dependiendo de tus necesidades de diseño */
+    top: 50%;
+    left: 50%; 
+     transform: translate(-50%, -50%);
+    
+    white-space: nowrap;
+    
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 10px 20px;
+    border-radius: 20px 20px 20px 20px;
+  }
+  
+
+  .corner-button {
+    position: absolute;
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+}
+
+ .social-icons {
+    position: fixed;
+    margin-top: 50px; 
+}  
+
+ul {
+    position: relative;
+    display: flex;
+}
+ul li {
+    position: relative;
+    list-style: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+ul li a {
+    text-decoration: none;
+}
+ul li a .fa-brands {
+    font-size: 6em;
+    color: #222;
+}
+ul li a::before {
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 6em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+ul li:nth-child(1) a::before {
+    content: "\f16d";
+    background-image: linear-gradient(45deg, 
+      #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,
+      #bc1888 100%);
+    -webkit-background-clip: text;
+    background-clip: 20px;
+     -webkit-text-fill-color: transparent;
+    border-bottom: 4px solid #dc2743;
+}
+ul li:nth-child(2) a::before {
+    content: "\f232";
+    color: #25D366;
+    border-bottom: 4px solid #25D366;
+}
+ul li:nth-child(3) a::before {
+    content: "\f099";
+    color: #1DA1F2;
+    border-bottom: 4px solid #1DA1F2;
+}
+ul li:hover a::before {
+    height: 100%;
+}
+
+body {
+    height: 100vh;
+     display: flex; 
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        45deg, #090a10 40%, #161b24
+    );
+    background-image:url('../images/original.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: glitch 0.5s infinite steps(20);
+} 
+
+
+@keyframes glitch {
+    0%, 10% {
+        background-image:url('../images/original.jpg'); 
+        background-size: cover;    
+    }
+
+    50.1%, 52% {
+        background-image:url('../images/1.png'); 
+        background-size: cover;
+    }
+
+    /* 52.1%, 54% {
+        background-image:url('../images/2.png'); 
+        background-size: cover;
+    } */
+
+    54.1%, 56% {
+        background-image:url('../images/3.png'); 
+        background-size: cover;
+    }
+
+    56.1%, 58% {
+        background-image:url('../images/4.png'); 
+        background-size: cover;
+    }
+
+    /* 58.1%, 60% {
+        background-image:url('../images/5.png'); 
+        background-size: cover;
+    } */
+
+    60.1%, 62% {
+        background-image:url('../images/6.png'); 
+        background-size: cover;
+    }
+
+    62.1%, 64% {
+        background-image:url('../images/7.png'); 
+        background-size: cover;
+    }
+
+    /* 64.1%, 66% {
+        background-image:url('../images/8.png'); 
+        background-size: cover;
+    } */
+
+    /* 66.1%, 68% {
+        background-image:url('../images/9.png'); 
+        background-size: cover;
+    } */
+
+    68.1%, 70% {
+        background-image:url('../images/10.png'); 
+        background-size: cover;
+    }
+
+    /* 70.1%, 72% {
+        background-image:url('../images/11.png'); 
+        background-size: cover;
+    } */
+
+    72.1%, 74% {
+        background-image:url('../images/12.png'); 
+        background-size: cover;
+    }
+
+    /* 74.1%, 76% {
+        background-image:url('../images/13.png'); 
+        background-size: cover;
+    } */
+
+    76.1%, 78% {
+        background-image:url('../images/14.png'); 
+        background-size: cover;
+    }
+
+    /* 78.1%, 80% {
+        background-image:url('../images/15.png'); 
+        background-size: cover;
+    } */
+
+    80.1%, 82% {
+        background-image:url('../images/16.png'); 
+        background-size: cover;
+    }
+
+    82.1%, 84% {
+        background-image:url('../images/17.png'); 
+        background-size: cover;
+    }
+
+    /* 84.1%, 86% {
+        background-image:url('../images/18.png'); 
+        background-size: cover;
+    } */
+
+    86.1%, 88% {
+        background-image:url('../images/19.png'); 
+        background-size: cover;
+    }
+
+    /* 88.1%, 90% {
+        background-image:url('../images/20.png'); 
+        background-size: cover;
+    } */
+
+    90.1%, 92% {
+        background-image:url('../images/21.png'); 
+        background-size: cover;
+    }
+
+    92.1%, 94% {
+        background-image:url('../images/22.png'); 
+        background-size: cover;
+    }
+
+    /* 94.1%, 96% {
+        background-image:url('../images/23.png'); 
+        background-size: cover;
+    } */
+
+    96.1%, 98% {
+        background-image:url('../images/24.png'); 
+        background-size: cover;
+    }
+
+    98.1%, 100% {
+        background-image:url('../images/25.png'); 
+        background-size: cover;
+    }
+/* 
+    100.1%, 102% {
+        background-image:url('../images/26.png'); 
+        background-size: cover;
+    } */
+
+
+}
+
+/* Adjusts the background size for viewports smaller than 480 pixels wide */
+@media only screen and (max-width: 480px) {
+    body {
+      background-size: 100% auto;
+    }
+    .centered-div {
+        width: 95%; /* Reducir aún más el ancho del div para pantallas muy pequeñas */
+    }
+  }
+  
+  /* Adjusts the background size for viewports between 481 and 768 pixels wide */
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+      background-size: 100% 100%;
+    }
+  }
+  
+  /* Adjusts the background size for viewports larger than 768 pixels wide */
+  @media only screen and (min-width: 769px) {
+    body {
+      background-size: cover;
+    }
+    .centered-div {
+        width: 90%; /* Reducir el ancho del div para pantallas más pequeñas */
+        max-width: none; /* Eliminar el ancho máximo */
+    }
+  }
+
+  
+
+
