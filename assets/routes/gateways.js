@@ -8,23 +8,11 @@ const gatewaysController = require('../controllers/gatewaysController');
 const { validateCreate } = require('../validator/gateway');
 
 
-
-// Ruta para manejar la redirección a la página web externa
+// ############  manejo de rutas externas  ###########
+// ruta errada de prueba
 router.get('/externalLink', gatewaysController.externalLink);
+// instagram
+router.get('/instagramLink', gatewaysController.instagramLink);
 
-
-/*
-// show gateway by serial number with their devices
-router.get('/gateways/:serialNumber/device', gatewaysController.getGatewayBySerialNumberWithDevices); //
-
-// create a new gateway
-router.post('/create/gateways',validateCreate , gatewaysController.createGateway);
-
-// create device at the gateway
-router.post('/create/device/:serialNumber',validateCreateDevice, gatewaysController.addDeviceToGateway);
-
-// delete device from gateway
-router.delete('/gateways/:serialNumber/devices/:deviceUid', gatewaysController.removeDeviceFromGateway);
-*/
 
 module.exports = router;
