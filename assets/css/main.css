@@ -1636,3 +1636,35 @@ section .headline
         text-align: center;
     }
 }
+
+/* query of floating button whatsapp */
+/* Media query para pantallas de menos de 600px de ancho */
+@media (max-width: 600px) {
+    .whatsapp {
+      width: 50px; /* Más pequeño para pantallas pequeñas */
+      height: 50px;
+      bottom: 20px; /* Menor distancia desde la parte inferior */
+      right: 20px; /* Menor distancia desde la derecha */
+      font-size: 25px; /* Tamaño de fuente más pequeño */
+    }
+  
+    .whatsapp-icon {
+      margin-top: 11px; /* Ajustar el margen superior si es necesario */
+    }
+  }
+  
+  /* Puedes añadir más puntos de ruptura para diferentes tamaños de pantalla si lo necesitas */
+  /* Por ejemplo, para pantallas aún más pequeñas, como teléfonos en modo retrato */
+  @media (max-width: 300px) {
+    .whatsapp {
+      width: 40px; /* Aún más pequeño para pantallas muy pequeñas */
+      height: 40px;
+      bottom: 10px; /* Más cerca del borde de la pantalla */
+      right: 10px;
+      font-size: 20px; /* Tamaño de fuente más pequeño */
+    }
+  
+    .whatsapp-icon {
+      margin-top: 9px; /* Ajustar el margen superior si es necesario */
+    }
+  }
