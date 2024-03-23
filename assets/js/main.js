@@ -92,3 +92,30 @@ jQuery(document).ready(function($) {
     
         
 });
+
+  // ######################   change text of button send email   ###################### 
+
+  // Esperar a que el DOM se cargue completamente
+  document.addEventListener('DOMContentLoaded', function() {
+    // Obtener el contenedor del texto
+    var emailSpan = document.querySelector('.email-text span');
+  
+    // Guardar el texto original
+    var originalText = emailSpan.textContent;
+  
+    // Función para cambiar el texto al pasar el mouse
+    function mouseOver() {
+      emailSpan.textContent = 'Enviar Email';
+    }
+  
+    // Función para revertir el texto cuando el mouse sale
+    function mouseOut() {
+      emailSpan.textContent = originalText;
+    }
+  
+    // Agregar event listeners al contenedor del texto
+    emailSpan.parentNode.addEventListener('mouseover', mouseOver);
+    emailSpan.parentNode.addEventListener('mouseout', mouseOut);
+  });
+  
+  

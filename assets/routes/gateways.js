@@ -13,6 +13,8 @@ const { validateCreate } = require('../validator/gateway');
 router.get('/externalLink', gatewaysController.externalLink);
 // instagram
 router.get('/instagramLink', gatewaysController.instagramLink);
+// facebook
+router.get('/facebookLink', gatewaysController.facebookLink);
 
 
 module.exports = router;
