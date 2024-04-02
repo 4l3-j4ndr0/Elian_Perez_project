@@ -15,6 +15,8 @@ router.get('/externalLink', gatewaysController.externalLink);
 router.get('/instagramLink', gatewaysController.instagramLink);
 // facebook
 router.get('/facebookLink', gatewaysController.facebookLink);
+// send email
+router.post('/send-email', gatewaysController.sendEmailMethod);
 
 
 module.exports = router;

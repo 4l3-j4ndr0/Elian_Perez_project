@@ -95,10 +95,21 @@ ul li:nth-child(4) a::before {
     border-bottom: 4px solid #1DA1F2;
 }
 ul li:nth-child(5) a::before {
+    content: "\e07b"; 
+   /* Assuming the top part of the "d" is pink and the bottom is light blue, just as an example */
+   background: linear-gradient(to bottom, #ee1d52 50%, #69c9d0 50%);
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent; /* This will make the text transparent, showing only the gradient */
+    /* color: #ffffff; */
+    border-bottom: 4px solid #ffffff;
+}
+ul li:nth-child(6) a::before {
     content: "\e3af";
     color: #ffffff;
     border-bottom: 4px solid #ffffff;
 }
+
 ul li:hover a::before {
     height: 100%;
 }

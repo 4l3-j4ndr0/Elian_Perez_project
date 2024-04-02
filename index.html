@@ -12,7 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- PAGE TITLE -->
-    <title>Polaris - One Page</title>
+    <title>Elian Pérez - Artista</title>
+
+    <!-- define emailjs -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/img/favicon.png">
@@ -849,7 +852,7 @@
                     <!-- /CONTACT TYPE -->
 
 
-                    <h6>email@yourdomain.com</h6>
+                    <h6>elianperez1987@gmail.com</h6>
                     
                 </li>
                 <!-- /CONTACT LIST ITEM -->
@@ -909,15 +912,15 @@
     <div class="overlay" id="overlay">
         <div class="popup" id="popup">
             <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-            <h3>SUSCRIBETE</h3>
-            <h4>y recibe un cupon de descuento.</h4>
-            <form action="https://formsubmit.co/09da3f1226384e118d32a56335e12f4d" method="POST">
+            <h3>CONTACTAME</h3>
+            <h4>y podre hacer arte con tu idea.</h4>
+            <form role="form" method="POST" id="myForm">
                 <div class="contenedor-inputs">
-                    <input type="text" placeholder="Nombre" name="name">
-                    <input type="email" placeholder="Correo" name="email">
-                    <textarea type="message" placeholder="Mensaje" name="message"></textarea>
+                    <input type="email" placeholder="Tu correo" name="email" id="email" title="Introduce tu email" required>
+                    <input type="text" placeholder="Asunto" name="subject" id="subject" title="Introduce el motivo de tu contacto" required>
+                    <textarea type="message" placeholder="Mensaje" name="message" id="message" title="Introduce tu mensaje" required></textarea>
                 </div>
-                <input type="submit" class="btn-submit" value="Enviar" id="sendMessage">
+                <button type="submit" class="btn-submit"  id="sendMessage">Enviar</button>
             </form>
         </div>
     </div>
@@ -958,10 +961,10 @@
                     <ul class="social-icons">
 
 
-                        <li><a href="/api/facebookLink" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="/api/instagramLink" target="_blank"><i class="fa-brands fa-instagram instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="/api/facebookLink" target="_blank"><i class="fa fa-facebook" aria-label="Visita mi Facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-label="Visita mi twitter"></i></a></li>
+                        <li><a href="/api/instagramLink" target="_blank"><i class="fa-brands fa-instagram instagram" aria-label="Visita mi Instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-tiktok" aria-label="Visita mi TikTok"></i></a></li>
 
                     </ul>
                     <!-- /SOCIAL ICONS -->

@@ -1,9 +1,13 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const fetch = require('cross-fetch');
+const bodyParser = require('body-parser');
+
 
 const routerGateways = express.Router();
 routerGateways.use(express.json());
+const nodemailer = require("nodemailer");
 
 const app = express();
 // Configurar Express para servir archivos estáticos desde la carpeta 'assets_error'
@@ -61,8 +65,45 @@ const facebookLink = async (req, res) => {
     }
 };
 
+// SEND EMAIL
+const sendEmailMethod = async (req, res) => {
+    const  { from_email_address, subject, message } = req.body;
+    console.log(req.body);
+// Configuración del servicio de correo electrónico
+const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true, // Use `true` for port 465, `false` for all other ports
+    auth: {
+      user: "al3jandro9400@gmail.com",
+      pass: process.env.NAME_APP_PASS,
+    },
+  });
+
+ // Definir el contenido del cuepro para el correo electrónico que deseas enviar
+ const mailOptions = {
+    to: process.env.TO_EMAIL_ADDRESS,
+    subject: subject ,
+    text: `${message}
+
+    FROM: ${from_email_address}`,
+  };
+  // Envía el correo electrónico utilizando el método sendMail del objeto transporter
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log("Error al enviar el correo:", error);
+      res.json({ success: false, message: 'Error al enviar el correo.' }); // Asegúrate de enviar un estado de fallo adecuado.
+    } else {
+      console.log("Correo enviado:", info.response);
+      res.json({ success: true, message: 'Correo enviado exitosamente.' });
+    }
+  });
+};
+
+
 module.exports = {
     instagramLink,
     externalLink,
     facebookLink,
+    sendEmailMethod,
 };

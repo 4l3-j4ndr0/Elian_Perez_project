@@ -1425,7 +1425,7 @@ section .headline
 .popup form .contenedor-inputs textarea {
 	width: 100%;
 	margin-bottom: 20px;
-	height: 52px;
+	height: 35px;
 	font-size: 18px;
 	line-height: 52px;
 	text-align: center;
@@ -1433,23 +1433,165 @@ section .headline
     color: #000;
 }
 
-.popup form .btn-submit {
-	padding: 0 20px;
-	height: 40px;
-	line-height: 40px;
-	border: none;
-	color: #fff;
-	background: #5E7DE3;
-	border-radius: 3px;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
-	cursor: pointer;
-	transition: .3s ease all;
+.popup form .contenedor-inputs textarea{
+    height: 110px !important;
 }
 
-.popup form .btn-submit:hover {
-	background: rgba(94,125,227, .9);
+
+
+.popup form .btn-submit {
+    display: inline-block;
+    min-width: 150px;
+    margin: 20px auto;
+    background: #8BC34A;
+    color: #fefefe;
+    font-size: 1.2em;
+    padding: 1em;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    transition: border-radius linear 0.05s, width linear 0.05s;
+  }
+  .popup form .btn-submit:focus {
+    outline: 0;
+  }
+  
+  /* animacion de spinning */
+  .popup form .btn-submit.animate {
+    width: 68.1818181818px;
+    height: 68.1818181818px;
+    min-width: 0;
+    border-radius: 50%;
+    color: transparent;
+  }
+  
+  .popup form .btn-submit.animate:after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    border: 4px solid #fefefe;
+    border-radius: 50%;
+    border-left-color: transparent;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin ease-in 2.5s forwards;
+  }
+  
+  /* animacion de success */
+  .popup form .btn-submit.success:before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 12.5px;
+    border: 4px solid #fefefe;
+    border-right: 0;
+    border-top: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) scale(0);
+    animation: success ease-in 0.15s forwards;
+    /* animation-delay: 2.5s; */
+  }
+  
+  /* animacion de error */
+  .popup form .btn-submit.error {
+    position: relative;
+    animation: vibrate ease-in 0.5s forwards;
+    /* animation-delay: 2.5s; */
+  }
+  
+  .popup form .btn-submit.error:before {
+    color: #fff;
+    position: absolute;
+    content: "!";
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: error ease-in 0.5s forwards;
+    /* animation-delay: 2.5s; */
+  }
+
+  #email.input-error,
+#subject.input-error,
+#message.input-error {
+  border: 2px solid red;
+  animation: shake 0.5s;
+  background-color: #ffffff !important;
 }
+
+#email.input-success,
+#subject.input-success,
+#message.input-success {
+  border: 2px solid green;
+  background-color: #ffffff !important;
+}
+  
+  @keyframes shake {
+    0% { margin-left: -5px; }
+    25% { margin-left: 5px; }
+    50% { margin-left: -5px; }
+    75% { margin-left: 5px; }
+    100% { margin-left: 0px; }
+  }
+
+  /* keyframes de las animaciones */
+  @keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+    90% {
+      transform: translate(-50%, -50%) rotate(1080deg) scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  
+  @keyframes success {
+    from {
+      transform: translate(-50%, -50%) rotate(0) scale(0);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+    }
+  }
+  
+  @keyframes error {
+    from {
+      transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+      transform: translate(-50%, -50%) scale(1);
+      background-color: #f44336;
+    }
+  }
+  
+  @keyframes vibrate {
+    0%, 30%, 60%, 85%, 100% {
+      left: 0;
+      background-color: #f44336;
+    }
+    10%, 40%, 90%, 70% {
+      left: -2px;
+      background-color: #f44336;
+    }
+    20%, 50%, 80%, 95% {
+      left: 2px;
+      background-color: #f44336;
+    }
+  }
+  
+  /*# sourceMappingURL=button_popup.css.map */
+  
 
 /* ------------------------- */
 /* ANIMACIONES */
@@ -1458,6 +1600,8 @@ section .headline
 .popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
 .popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
 .popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+
+
 
 @keyframes entradaTitulo {
 	from {
@@ -1668,3 +1812,43 @@ section .headline
       margin-top: 9px; /* Ajustar el margen superior si es necesario */
     }
   }
+
+  /* responsive pop-up */
+  /* Media queries para hacer responsivo el pop-up */
+
+/* Para dispositivos móviles */
+@media only screen and (max-width: 599px) {
+    .popup {
+      width: 90%; /* Más ancho para llenar más espacio en dispositivos pequeños */
+      transform: scale(1); /* Asegura que el pop-up no está escalado */
+    }
+  }
+  
+  /* Para tablets en modo vertical y paisajes pequeños */
+  @media only screen and (min-width: 600px) {
+    .popup {
+      width: 80%; /* Algo más estrecho para tablets */
+    }
+  }
+  
+  /* Para tablets en modo paisaje y monitores pequeños */
+  @media only screen and (min-width: 768px) {
+    .popup {
+      width: 70%; /* Más estrecho para vistas más amplias */
+    }
+  }
+  
+  /* Para escritorios */
+  @media only screen and (min-width: 992px) {
+    .popup {
+      width: 50%; /* Un buen tamaño para escritorios */
+    }
+  }
+  
+  /* Para escritorios grandes */
+  @media only screen and (min-width: 1200px) {
+    .popup {
+      width: 600px; /* Un ancho fijo para pantallas grandes */
+    }
+  }
+  
