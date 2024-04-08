@@ -29,32 +29,3 @@ btnCerrarPopup.addEventListener('click', function(e) {
     cerrarPopup()
 });
 
-function formIsValid () {
-    let result = false;
-
-  // Validar el email
-  if (!email.value) {
-    console.error('El campo de correo está vacío.');
-    formIsValid = false;
-  } else if (!/\S+@\S+\.\S+/.test(email)) {
-    console.error('El correo proporcionado no es válido.');
-    formIsValid = false;
-  }
-
-  // Validar el asunto
-  if (!subject) {
-    console.error('El campo asunto está vacío.');
-    formIsValid = false;
-  }
-
-  // Validar el mensaje
-  if (!message) {
-    console.error('El campo de mensaje está vacío.');
-    formIsValid = false;
-  }
-
-  // Si alguno de los campos no es válido, prevenir que el formulario se envíe
-  if (!formIsValid) {
-    event.preventDefault();
-  }
-}

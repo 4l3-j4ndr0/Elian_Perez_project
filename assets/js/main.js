@@ -229,6 +229,12 @@ document.addEventListener('DOMContentLoaded', function () {
           }, 1500); // 3000 milisegundos = 3 segundos
         } else {
           // Acciones en caso de fallo
+          return response.json().then(err => {
+            throw new Error('Error al enviar el correo: ' + (err.message || 'Respuesta de red no fue ok'));
+          }).catch(error => {
+            // En caso de que no se pueda parsear el JSON, lanza un error general
+            throw new Error('Respuesta de red no fue ok y no se pudo parsear el error');
+          });
           console.error('No se pudo enviar el correo: ', data.message);
           btnSendMessage.classList.remove('animate');
           btnSendMessage.textContent = ''
