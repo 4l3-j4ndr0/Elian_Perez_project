@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       })
       .catch(error => {
-        alert(error)
+        alert(error.message)
         console.error('Error durante el envío: ', error);
         btnSendMessage.classList.remove('animate');
           btnSendMessage.textContent = ''
