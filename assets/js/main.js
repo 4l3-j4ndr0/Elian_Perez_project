@@ -229,9 +229,6 @@ document.addEventListener('DOMContentLoaded', function () {
           }, 1500); // 3000 milisegundos = 3 segundos
         } else {
           // Acciones en caso de fallo
-          if(error){
-            console.error('mensaje de error: ', error);
-          }
           console.error('No se pudo enviar el correo sin error: ', data);
           console.error('No se pudo enviar el correo con error: ', data.error);
           btnSendMessage.classList.remove('animate');
@@ -264,3 +261,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
