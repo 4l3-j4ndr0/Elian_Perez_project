@@ -92,7 +92,7 @@ const transporter = nodemailer.createTransport({
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log("Error al enviar el correo:", error);
-      res.json({ success: false, message: 'Error al enviar el correo.' }); // Asegúrate de enviar un estado de fallo adecuado.
+      res.json({ success: false, message: error.message }); // Asegúrate de enviar un estado de fallo adecuado.
     } else {
       console.log("Correo enviado:", info.response);
       res.json({ success: true, message: 'Correo enviado exitosamente.' });
