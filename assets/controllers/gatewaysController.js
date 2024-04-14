@@ -71,11 +71,11 @@ const sendEmailMethod = async (req, res) => {
     console.log(req.body);
 // Configuración del servicio de correo electrónico
 const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
+    host: process.env.HOST_EMAIL,
+    port: process.env.PORT_EMAIL,
     secure: true, // Use `true` for port 465, `false` for all other ports
     auth: {
-      user: "al3jandro9400@gmail.com",
+      user: process.env.TO_EMAIL_ADDRESS,
       pass: process.env.NAME_APP_PASS,
     },
   });
