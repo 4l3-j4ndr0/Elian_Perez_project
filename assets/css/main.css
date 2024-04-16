@@ -648,7 +648,7 @@ section .headline
     height: 100vh;
 }
 
-#intro .container-mid
+#intro .container-mid 
 {
     position: absolute;
     top: 50%;
@@ -975,9 +975,89 @@ section .headline
     #service .service-item
     {
         text-align: center !important;
+        margin-bottom: 13rem;
     }
+
+    .cta {
+        /* Aquí añades los estilos para hacer .cta responsive */
+        font-size: 16px; /* Incrementa el tamaño del texto para una mejor legibilidad */
+        padding: 8px 12px; /* Aumenta el padding para un mejor toque en pantallas táctiles */
+        /* Puedes agregar más estilos según sea necesario */
+      }
+    
+      .cta:before {
+        /* Ajustes para el pseudoelemento :before si es necesario */
+        width: 40px; /* Puedes ajustar el tamaño si se requiere */
+        height: 40px;
+      }
+    
+      .cta span {
+        /* Ajustes para el span si es necesario */
+      }
+    
+      .cta svg {
+        /* Ajustes para el SVG si es necesario */
+        width: 15px; /* Puedes ajustar el tamaño del SVG si se requiere */
+        height: 12px;
+      }
 }
 
+/**mor info botton **/
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .cta {
+    position: relative;
+    margin: auto;
+    padding: 4px 6px;
+    transition: all 0.2s ease;
+  }
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgba(19, 187, 189);
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+  }
+  .cta span {
+    position: relative;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: #ffffff;
+  }
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #ffffff;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  .cta:hover:before {
+    width: 100%;
+    background:  rgba(19, 187, 189);
+  }
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  .cta:active {
+    transform: scale(0.96);
+  }
 
 
 /** 9. Section --> Work
@@ -1173,7 +1253,7 @@ section .headline
     opacity: 1;
 }
 
-#work .work-carousel .item .lightbox-wrapper
+#work .work-carousel .item .lightbox-wrapper, #service .cta .lightbox-wrapper
 {
     position: absolute;
 
