@@ -1374,7 +1374,25 @@ a {
 
 /** 11. Section --> Contact
 *******************************************************************/
+/* efecto en ciclo del boton de email */
+#contact .contact-list .contact-list-item .contact-type#btn-abrir-popup {
+    animation: botonAnimadoExterno 2s infinite;
+}
 
+@keyframes botonAnimadoExterno {
+    0%, 100% {
+        box-shadow: 
+          0 0 0 0px rgba(255, 255, 255, 0),
+          0 0 0 5px rgba(255, 255, 255, 0),
+          0 0 0 10px rgba(255, 255, 255, 0); /* Tres líneas, todas transparentes inicialmente */
+      }
+      50% {
+        box-shadow: 
+          0 0 0 5px rgba(19, 187, 189, 1),
+          0 0 0 10px rgba(59, 227, 229, 1),
+          0 0 0 15px rgba(99, 247, 249, 1); /* Líneas expandiéndose y disminuyendo en opacidad */
+      }
+}
 #contact .contact-list
 {
     display: inline-block;
@@ -1428,7 +1446,6 @@ a {
 
     margin: 0;
 }
-
 
 /* ------------------------- */
 /* POPUP */

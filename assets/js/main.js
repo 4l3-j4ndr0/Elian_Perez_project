@@ -261,22 +261,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
-
-
-$(document).ready(function() {
-  // Asegúrate de que tu selector corresponde al elemento en tu HTML
-  $('a[data-featherlight="#item-pintura-lightbox"]').on('click', function(e){
-      e.preventDefault();  // Previene el comportamiento por defecto del enlace
-      $.featherlight($('#item-pintura-lightbox'), {
-          afterContent: function(event){
-              // Inicializa el carrusel aquí
-              $(".owl-carousel").owlCarousel({
-                  // Opciones de Owl Carousel aquí
-                  items: 1,
-                  loop: true,
-                  autoplay: true
-              });
-          }
-      });
-  });
-});
