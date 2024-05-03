@@ -114,11 +114,28 @@
             <div class="animation-container animation-fade-down" data-animation-delay="0">
 
                 <h1>I turn your vision into exceptional art:<br>your inspiration, my canvas!</h1>
+                <!-- Google Calendar Appointment Scheduling begin -->
+                <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                <script>
+                    (function () {
+                        var target = document.currentScript;
+                        window.addEventListener('load', function () {
+                            calendar.schedulingButton.load({
+                                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3kJUt5K-_8iGv6pAFSzWrPGUkRnu2gyu2DfXRXlctchuiz8GEObIx9QPxAJdo7AKk9o5wEPVEc?gv=true',
+                                color: '#039BE5',
+                                label: 'Book an appointment',
+                                target,
+                            });
+                        });
+                    })();
+                </script>
+                <!-- end Google Calendar Appointment Scheduling -->
 
             </div>
             <!-- /ANIMATION CONTAINER -->
 
-
+            <div style="height: 50px;"></div>
             <!-- ANIMATION CONTAINER -->
             <div class="animation-container animation-fade-up" data-animation-delay="300">
 
@@ -174,8 +191,18 @@
                         centrado en la creatividad y la autenticidad, Pérez Fuentes continúa cautivando al
                         público con su singular visión artística.</p>
                 </div>
-                <!-- /Columna para el texto -->
+                
             </div>
+            <!-- /Columna para el texto -->
+            <div style="height: 50px;"></div>
+            <!--Mor info -->
+            <a href="/biografia/index.html" class="cta">
+                <span>Saber mas ...</span>
+                <svg width="13px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+            </a>
 
             <!-- /CONTAINER FLUID -->
 
@@ -207,7 +234,7 @@
                     para capturar y materializar tus visiones creativas con precisión y arte.</p>
                 <br />
                 <!--Mor info -->
-                <a href="#" class="cta">
+                <a href="/api/galeryLink?grupo=drawing" class="cta">
                     <span>Detalles</span>
                     <svg width="13px" height="10px" viewBox="0 0 13 10">
                         <path d="M1,5 L11,5"></path>
@@ -236,105 +263,13 @@
 
                 <br />
                 <!--Mor info -->
-                <a href="/drawing_page/index.html" class="cta">
+                <a href="/api/galeryLink?grupo=paint" class="cta">
                     <span>Detalles</span>
                     <svg width="13px" height="10px" viewBox="0 0 13 10">
                         <path d="M1,5 L11,5"></path>
                         <polyline points="8 1 12 5 8 9"></polyline>
                     </svg>
-
- <!-- LIGHTBOX WRAPPER -->
- <div class="lightbox-wrapper ">
-
-
-    <!-- LIGHTBOX -->
-    <div id="item-pintura-lightbox" class="work-lightbox">
-
-
-        <!-- WORK CAROUSEL -->
-        <div class="work-carousel owl-carousel scroll-animated-from-bottom">
-
-
-            <!-- ITEM -->
-            <div class="item">
-                <img class="img-responsive" src="assets/img/work/work-2.jpg" alt="image">
-
-            </div>
-            <!-- /ITEM -->
-
-
-            <!-- ITEM -->
-            <div class="item">
-                <img class="img-responsive" src="assets/img/work/work-2.jpg" alt="image">
-            </div>
-            <!-- /ITEM -->
-
-
-            <!-- ITEM -->
-            <div class="item">
-                <img class="img-responsive" src="assets/img/work/work-3.jpg" alt="image">
-            </div>
-            <!-- /ITEM -->
-
-
-            <!-- ITEM -->
-            <div class="item">
-                <img class="img-responsive" src="assets/img/work/work-4.jpg" alt="image">
-
-            </div>
-            <!-- /ITEM -->
-
-
-            <!-- ITEM -->
-            <div class="item">
-                <img class="img-responsive" src="assets/img/work/work-5.jpg" alt="image">
-            </div>
-            <!-- /ITEM -->
-
-
-        </div>
-        <!-- WORK CAROUSEL -->
-
-        <!-- DESCRIPTION -->
-        <div class="description">
-
-
-            <h3>Studio 82</h3>
-            <p class="subline">Marketing</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed arcu dolor.
-                Suspendisse elementum eu arcu sit amet viverra. Vestibulum sodales semper risus vel
-                scelerisque. Vestibulum quis lacinia purus, vitae scelerisque sem. Vivamus massa
-                mauris, porttitor ac nisl sit amet, sagittis posuere diam. Integer vitae arcu eget
-                metus condimentum dapibus. Donec dignissim fermentum odio, eget elementum sapien
-                varius eu. Quisque elementum posuere nibh et ullamcorper. Pellentesque cursus ipsum
-                eu luctus suscipit. Nunc a commodo arcu.</p>
-
-            <p>Quisque ac enim felis. Mauris leo erat, congue ac sem quis, pretium lacinia tortor.
-                Suspendisse ac nunc eget dui tempus gravida quis vehicula ligula. Nam porta tortor
-                vitae pulvinar tincidunt. Duis elementum velit id eros condimentum vehicula. Quisque
-                rhoncus luctus mi, non luctus sapien. Cras suscipit leo vitae tincidunt euismod.
-                Donec metus quam, consequat non massa ac, hendrerit dictum quam. Vivamus nec metus
-                tristique, condimentum purus maximus, congue sem. Proin bibendum sed justo non
-                suscipit. Aliquam a euismod mauris.</p>
-
-
-        </div>
-        <!-- /DESCRIPTION -->
-
-
-    </div>
-    <!-- /LIGHTBOX -->
-
-
-</div>
-<!-- /LIGHTBOX WRAPPER -->
-
                 </a>
-
-               
-
-                <!-- Mor info -->
             </div>
 
             <!-- /COLUMN -->
@@ -767,8 +702,11 @@
 
             <!-- CLIENT FEEDBACK -->
             <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-7ebddef1-a551-41ca-8225-2480c46cab8b" data-elfsight-app-lazy></div>
+            <div class="elfsight-app-7ebddef1-a551-41ca-8225-2480c46cab8b" data-elfsight-app-lazy></div>
             <div class="client-feedback">
+
+
+
 
 
                 <!-- CLIENT FEEDBACK ITEM -->

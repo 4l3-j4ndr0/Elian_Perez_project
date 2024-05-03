@@ -17,6 +17,8 @@ router.get('/instagramLink', gatewaysController.instagramLink);
 router.get('/facebookLink', gatewaysController.facebookLink);
 // tiktok
 router.get('/tiktokLink', gatewaysController.tiktokLink);
+// galery
+router.get('/galeryLink', gatewaysController.galeryLink);
 // send email
 router.post('/send-email', gatewaysController.sendEmailMethod);
 

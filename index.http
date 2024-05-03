@@ -15,9 +15,14 @@ GET http://localhost:3003/api/facebookLink HTTP/1.1
 Content-Type: application/json
 
 ###
+// go tiktok
 GET http://localhost:3003/api/tiktokLink HTTP/1.1
 Content-Type: application/json
 
+###
+// go galery of services
+GET http://localhost:3003/api/galeryLink?grupo=drawing HTTP/1.1
+Content-Type: application/json
 
 ###
 
