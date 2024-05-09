@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const routerGateways = express.Router();
 routerGateways.use(express.json());
 const nodemailer = require("nodemailer");
+const { error } = require('console');
 
 const app = express();
 // Configurar Express para servir archivos estáticos desde la carpeta 'assets_error'
@@ -66,7 +67,7 @@ const facebookLink = async (req, res) => {
 };
 
 const tiktokLink = async (req, res) => {
-    try {
+    try { 
         const response = await fetch('https://www.tiktok.com/t/ZPRTS9NFE/');
         if (response.ok) {
             res.redirect('https://www.tiktok.com/t/ZPRTS9NFE/');
@@ -82,8 +83,32 @@ const tiktokLink = async (req, res) => {
     }
 };
 
+
+const biografiaLink =  (req, res) => {
+    console.log( 'en el endpoint')
+    try {
+        const biografia = path.resolve(__dirname, '..', '..', 'biografia', 'index.html');
+        res.sendFile(biografia , (err) => {
+            if (err){
+                console.log(error.message)
+        console.error('Error:', error);
+        const errorPage = path.resolve(__dirname, '..', '..', 'error_page', 'index.html');
+        res.status(500).sendFile(errorPage);
+            }
+        });
+    } catch (error) {
+        console.log(error.message)
+        console.error('Error:', error);
+        const errorPage = path.resolve(__dirname, '..', '..', 'error_page', 'index.html');
+        res.status(500).sendFile(errorPage);
+    }
+};
+    
+
+
 // pagina de galerias
 const galeryLink = (req, res) => {
+    console.log( 'en el endpoint galery')
     try {
         const grupo = req.query.grupo;  // Captura el parámetro 'grupo' desde la URL
         const pagePath = path.resolve(__dirname, '..', '..', 'error_page', 'index.html');
@@ -154,4 +179,5 @@ module.exports = {
     sendEmailMethod,
     tiktokLink,
     galeryLink,
+    biografiaLink,
 };

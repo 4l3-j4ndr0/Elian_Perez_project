@@ -228,6 +228,7 @@ a:hover
 
     width: 50%;
     height: 100%;
+    object-fit: cover;  /* Cubre el área del contenedor sin deformar la imagen */
 }
 
 .image-container .background-img
@@ -247,6 +248,7 @@ a:hover
     background: url(../img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: cover;  /* Cubre el área del contenedor sin deformar la imagen */
 }
 
 @media (max-width:1200px)

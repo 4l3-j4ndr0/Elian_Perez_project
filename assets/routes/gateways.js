@@ -15,8 +15,12 @@ router.get('/externalLink', gatewaysController.externalLink);
 router.get('/instagramLink', gatewaysController.instagramLink);
 // facebook
 router.get('/facebookLink', gatewaysController.facebookLink);
+debugger
 // tiktok
 router.get('/tiktokLink', gatewaysController.tiktokLink);
+debugger
+// biografia
+router.get('/biografiaLink', gatewaysController.biografiaLink);
 // galery
 router.get('/galeryLink', gatewaysController.galeryLink);
 // send email

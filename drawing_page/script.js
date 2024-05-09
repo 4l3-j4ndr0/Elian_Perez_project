@@ -19,11 +19,11 @@ let swiper =new Swiper(".mySwiper",{
 
 
 // Obtiene el modal
-var modal = document.getElementById("imageModal");
+let modal = document.getElementById("imageModal");
 
 // Obtiene la imagen e inserta dentro del modal, y añade el texto de caption
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
+let modalImg = document.getElementById("img01");
+let captionText = document.getElementById("caption");
 document.querySelectorAll('.swiper-slide img').forEach(img => {
     img.onclick = function(){
         modal.style.display = "block";
@@ -33,7 +33,7 @@ document.querySelectorAll('.swiper-slide img').forEach(img => {
 });
 
 // Obtiene el elemento <span> que cierra el modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // Cuando el usuario hace clic en <span> (x), cierra el modal
 span.onclick = function() { 
@@ -122,11 +122,11 @@ window.onclick = function(event) {
 //     initSwiper()
     
 //     // Obtiene el modal
-//     var modal = document.getElementById("imageModal");
+//     let modal = document.getElementById("imageModal");
 
 //     // Obtiene la imagen e inserta dentro del modal, y añade el texto de caption
-//     var modalImg = document.getElementById("img01");
-//     var captionText = document.getElementById("caption");
+//     let modalImg = document.getElementById("img01");
+//     let captionText = document.getElementById("caption");
 //     document.querySelectorAll('.swiper-slide img').forEach(img => {
 //         img.onclick = function () {
 //             modal.style.display = "block";
@@ -136,7 +136,7 @@ window.onclick = function(event) {
 //     });
 
 //     // Obtiene el elemento <span> que cierra el modal
-//     var span = document.getElementsByClassName("close")[0];
+//     let span = document.getElementsByClassName("close")[0];
 
 //     // Cuando el usuario hace clic en <span> (x), cierra el modal
 //     span.onclick = function () {
@@ -150,3 +150,31 @@ window.onclick = function(event) {
 //         }
 //     }
 // });
+
+// animacion texto
+let text = document.getElementById('text');
+let text2 = document.getElementById('text2');
+        let newDom = '';
+        let animationDelay = 6;
+        animate(text)
+        setTimeout(function() {
+            text2.style.display = 'block'
+            animate(text2)
+        }, 3000);
+        
+function animate(text){
+    
+    for(let i = 0; i < text.innerText.length; i++)
+        {
+            newDom += '<span class="char">' + (text.innerText[i] == ' ' ? '&nbsp;' : text.innerText[i])+ '</span>';
+        }
+
+        text.innerHTML = newDom;
+        let length = text.children.length;
+
+        for(let i = 0; i < length; i++)
+        {
+            text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
+        }
+}
+
