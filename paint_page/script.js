@@ -28,7 +28,8 @@ document.querySelectorAll('.swiper-slide img').forEach(img => {
     img.onclick = function(){
         modal.style.display = "block";
         modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
+        captionText.innerHTML = `<p> Titulo: ${this.dataset.title.trim()} <br> Tecnica: ${this.dataset.tecnica.trim()} <br> Dimenciones: ${this.dataset.medidas.trim()} <br> Expuesto: ${this.dataset.caption.trim()}</p>`;
+        // captionText.innerHTML = this.alt;
     }
 });
 
@@ -151,30 +152,4 @@ window.onclick = function(event) {
 //     }
 // });
 
-// animacion texto
-let text = document.getElementById('text');
-let text2 = document.getElementById('text2');
-        let newDom = '';
-        let animationDelay = 6;
-        animate(text)
-        setTimeout(function() {
-            text2.style.display = 'block'
-            animate(text2)
-        }, 3000);
-        
-function animate(text){
-    
-    for(let i = 0; i < text.innerText.length; i++)
-        {
-            newDom += '<span class="char">' + (text.innerText[i] == ' ' ? '&nbsp;' : text.innerText[i])+ '</span>';
-        }
-
-        text.innerHTML = newDom;
-        let length = text.children.length;
-
-        for(let i = 0; i < length; i++)
-        {
-            text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
-        }
-}
 

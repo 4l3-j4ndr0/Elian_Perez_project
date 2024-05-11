@@ -28,7 +28,8 @@ document.querySelectorAll('.swiper-slide img').forEach(img => {
     img.onclick = function(){
         modal.style.display = "block";
         modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
+        captionText.innerHTML = `<p> Titulo: ${this.dataset.title.trim()} <br> Tecnica: ${this.dataset.tecnica.trim()} <br> Dimenciones: ${this.dataset.medidas.trim()} <br> Expuesto: ${this.dataset.caption.trim()}</p>`;
+        // captionText.innerHTML = this.alt;
     }
 });
 
