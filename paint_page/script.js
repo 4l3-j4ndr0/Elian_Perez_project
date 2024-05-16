@@ -1,3 +1,4 @@
+debugger
 let swiper =new Swiper(".mySwiper",{
     effect: "coverflow",
     grabCursor: true,
@@ -24,16 +25,54 @@ let modal = document.getElementById("imageModal");
 // Obtiene la imagen e inserta dentro del modal, y añade el texto de caption
 let modalImg = document.getElementById("img01");
 let captionText = document.getElementById("caption");
+let closeBtn = document.getElementsByClassName("close")[0];
+let prevBtn = document.getElementsByClassName("prev")[0];
+let nextBtn = document.getElementsByClassName("next")[0];
+let currentIndex = 0;
+let angleImages = [];
 document.querySelectorAll('.swiper-slide img').forEach(img => {
     img.onclick = function(){
         modal.style.display = "block";
-        modalImg.src = this.src;
+        angleImages = this.getAttribute('data-angles').split(',');
+        currentIndex = 0; // Mostrar la imagen principal primero
+        showImage(currentIndex);
         captionText.innerHTML = `<p> Titulo: ${this.dataset.title.trim()} <br> Tecnica: ${this.dataset.tecnica.trim()} <br> Dimenciones: ${this.dataset.medidas.trim()} <br> Expuesto: ${this.dataset.caption.trim()}</p>`;
-        // captionText.innerHTML = this.alt;
+            document.addEventListener('keydown', handleKeyDown); // Añadir evento al abrir el modal
     }
 });
 
+function showImage(index) {
+    if (index >= angleImages.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = angleImages.length - 1;
+    } else {
+        currentIndex = index;
+    }
+    modalImg.src = angleImages[currentIndex];
+}
+
+prevBtn.onclick = function() {
+    showImage(currentIndex - 1);
+}
+
+nextBtn.onclick = function() {
+    showImage(currentIndex + 1);
+}
+
+function handleKeyDown(event) {
+    if (event.key === 'ArrowLeft') {
+        showImage(currentIndex - 1);
+    } else if (event.key === 'ArrowRight') {
+        showImage(currentIndex + 1);
+    } else if (event.key === 'Escape') {
+        modal.style.display = "none";
+        document.removeEventListener('keydown', handleKeyDown);
+    }
+}
+
 // Obtiene el elemento <span> que cierra el modal
+
 let span = document.getElementsByClassName("close")[0];
 
 // Cuando el usuario hace clic en <span> (x), cierra el modal
