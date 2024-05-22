@@ -103,6 +103,26 @@ const tiktokLink = async (req, res) => {
 //         res.status(500).sendFile(errorPage);
 //     }
 // };
+
+const tiendaLink =  (req, res) => {
+    console.log( 'en el endpoint')
+    try {
+        const biografia = path.resolve(__dirname, '..', '..', 'biografia', 'index.html');
+        res.sendFile(biografia , (err) => {
+            if (err){
+                console.log(error.message)
+        console.error('Error:', error);
+        const errorPage = path.resolve(__dirname, '..', '..', 'error_page', 'index.html');
+        res.status(500).sendFile(errorPage);
+            }
+        });
+    } catch (error) {
+        console.log(error.message)
+        console.error('Error:', error);
+        const errorPage = path.resolve(__dirname, '..', '..', 'error_page', 'index.html');
+        res.status(500).sendFile(errorPage);
+    }
+};
     
 
 
@@ -179,5 +199,6 @@ module.exports = {
     sendEmailMethod,
     tiktokLink,
     galeryLink,
+    tiendaLink,
     // biografiaLink,
 };

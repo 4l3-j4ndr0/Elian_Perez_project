@@ -155,6 +155,7 @@ html input[type=button],
 input[type=reset],
 input[type=submit] {
     -webkit-appearance: button;
+    appearance: auto;
     cursor: pointer
 }
 
@@ -190,7 +191,8 @@ input[type=search] {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    -webkit-appearance: textfield
+    -webkit-appearance: textfield;
+    appearance: auto;
 }
 
 input[type=search]::-webkit-search-cancel-button,
@@ -1451,6 +1453,16 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.client{
+    border-radius: 50%;
+    height: 12rem;
+    /* margin-top:5rem; */
+}
+
+.text{
+    margin-bottom: 5rem;
 }
 
 .img-rounded {
@@ -3380,7 +3392,8 @@ textarea.form-control {
 }
 
 input[type=search] {
-    -webkit-appearance: none
+    -webkit-appearance: none;
+    appearance: auto;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -7254,6 +7267,7 @@ button.list-group-item-danger.active:hover {
 
 button.close {
     -webkit-appearance: none;
+    appearance: auto;
     padding: 0;
     cursor: pointer;
     background: 0 0;
@@ -7877,7 +7891,7 @@ button.close {
     list-style: none
 }
 
-.carousel-indicators li {
+/* .carousel-indicators li {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -7888,6 +7902,19 @@ button.close {
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #fff;
     border-radius: 10px
+} */
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color:red;
+    background-color: rgba(0, 0, 0, 0); 
+    border: 1px solid #fff;
+    border-radius: 50%; 
 }
 
 .carousel-indicators .active {
@@ -8447,6 +8474,7 @@ button.close {
 
 .fa-rotate-90 {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+    filter: auto;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg)
@@ -8454,6 +8482,7 @@ button.close {
 
 .fa-rotate-180 {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+    filter: auto;
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg)
@@ -8461,6 +8490,7 @@ button.close {
 
 .fa-rotate-270 {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+    filter: auto;
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg)
@@ -8468,6 +8498,7 @@ button.close {
 
 .fa-flip-horizontal {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+    filter: auto;
     -webkit-transform: scale(-1, 1);
     -ms-transform: scale(-1, 1);
     transform: scale(-1, 1)
@@ -8475,6 +8506,7 @@ button.close {
 
 .fa-flip-vertical {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+    filter: auto;
     -webkit-transform: scale(1, -1);
     -ms-transform: scale(1, -1);
     transform: scale(1, -1)
@@ -11487,7 +11519,9 @@ button.close {
 .owl-carousel .owl-stage {
     position: relative;
     -ms-touch-action: pan-Y;
-    -moz-backface-visibility: hidden
+    touch-action: auto;
+    -moz-backface-visibility: hidden;
+    backface-visibility: auto;
 }
 
 .owl-carousel .owl-stage:after {
@@ -11502,15 +11536,18 @@ button.close {
 .owl-carousel .owl-stage-outer {
     position: relative;
     overflow: hidden;
-    -webkit-transform: translate3d(0, 0, 0)
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: auto;
 }
 
 .owl-carousel .owl-item,
 .owl-carousel .owl-wrapper {
     -webkit-backface-visibility: hidden;
+    backface-visibility:auto;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
+    transform: auto;
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0)
 }
@@ -11519,6 +11556,7 @@ button.close {
     min-height: 1px;
     float: left;
     -webkit-backface-visibility: hidden;
+    backface-visibility: auto;
     -webkit-touch-callout: none
 }
 
@@ -11640,6 +11678,7 @@ button.close {
     cursor: pointer;
     z-index: 1;
     -webkit-backface-visibility: hidden;
+    backface-visibility: auto;
     transition: transform .1s ease
 }
 
@@ -11722,6 +11761,7 @@ button.close {
     background: #D6D6D6;
     display: block;
     -webkit-backface-visibility: visible;
+    backface-visibility: auto;
     transition: opacity .2s ease;
     border-radius: 30px
 }
