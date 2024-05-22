@@ -20,7 +20,8 @@ debugger
 router.get('/tiktokLink', gatewaysController.tiktokLink);
 debugger
 // biografia
-router.get('/biografiaLink', gatewaysController.biografiaLink);
+// router.get('/biografiaLink', gatewaysController.biografiaLink);
+
 // galery
 router.get('/galeryLink', gatewaysController.galeryLink);
 // send email
