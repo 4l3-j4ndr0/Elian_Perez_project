@@ -41,6 +41,8 @@ document.querySelectorAll('.swiper-slide img').forEach(img => {
     }
 });
 
+
+
 function showImage(index) {
     if (index >= angleImages.length) {
         currentIndex = 0;
@@ -70,6 +72,8 @@ function handleKeyDown(event) {
         document.removeEventListener('keydown', handleKeyDown);
     }
 }
+
+
 
 // Obtiene el elemento <span> que cierra el modal
 
