@@ -5,9 +5,13 @@ require('dotenv').config();
 const bodyParser = require('body-parser');
 const gatewaysRouter = require('../routes/gateways');
 const path = require('path');
+const mongoose = require('mongoose');
 
 
 const app = express();
+
+// Conexión a la base de datos
+const db = require('../db/conexion');
 
 
 const port = process.env.PORT || 3002;

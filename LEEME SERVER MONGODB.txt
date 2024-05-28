@@ -1,0 +1,2 @@
+PA LEVANTAR EL SERVER DE MONGODB ABRE EL TERMINAL Y ESCRIBE : mongod
+luego da enter y listo

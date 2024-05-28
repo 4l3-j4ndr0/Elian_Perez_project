@@ -27,6 +27,10 @@ router.get('/tiendaLink', gatewaysController.tiendaLink);
 router.get('/galeryLink', gatewaysController.galeryLink);
 // send email
 router.post('/send-email', gatewaysController.sendEmailMethod);
+//crear nuevo comentario
+router.post('/createTestimonios', gatewaysController.createTestimonios);
+//mostrar todos los comentarios
+router.get('/getTestimonios', gatewaysController.getTestimonios);
 
 
 module.exports = router;

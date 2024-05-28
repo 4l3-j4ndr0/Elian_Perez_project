@@ -21,6 +21,15 @@
     border-radius: 50%;
   }
 
+  .name a {
+    color: inherit; /* Mantiene el color original */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.name a:hover {
+    color: #3db9ff; /* Cambia el color al pasar el cursor */
+}
+
   .testimonial .slide {
     display: flex;
     align-items: center;

@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const fetch = require('cross-fetch');
 const bodyParser = require('body-parser');
+const Testimonio = require('../db/model/testimonios');
 
 
 const routerGateways = express.Router();
@@ -164,7 +165,7 @@ const sendEmailMethod = async (req, res) => {
         port: process.env.PORT_EMAIL,
         secure: true, // Use `true` for port 465, `false` for all other ports
         auth: {
-            user: process.env.TO_EMAIL_ADDRESS,
+            Testimonios: process.env.TO_EMAIL_ADDRESS,
             pass: process.env.NAME_APP_PASS,
         },
     });
@@ -191,6 +192,31 @@ const sendEmailMethod = async (req, res) => {
 
 
 
+// Crear un nuevo usuario
+const createTestimonios = async (req, res) => {
+  try {
+    const testimonios = new Testimonio(req.body);
+    await testimonios.save();
+    res.status(201).send(Testimonio);
+  } catch (error) {
+    res.status(400).send(error);
+  }
+};
+
+// Obtener todos los usuarios
+const getTestimonios = async (req, res) => {
+  try {
+    const testimonios = await Testimonio.find();
+    res.status(200).send(testimonios);
+  } catch (error) {
+    console.log(error.message)
+    res.status(500).send(error);
+  }
+};
+
+
+
+
 
 module.exports = {
     instagramLink,
@@ -200,5 +226,7 @@ module.exports = {
     tiktokLink,
     galeryLink,
     tiendaLink,
+    createTestimonios,
+    getTestimonios,
     // biografiaLink,
 };
