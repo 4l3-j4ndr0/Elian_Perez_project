@@ -105,22 +105,19 @@ const tiktokLink = async (req, res) => {
 //     }
 // };
 
-const tiendaLink =  (req, res) => {
-    console.log( 'en el endpoint')
+const tiendaLink = async (req, res) => {
     try {
-        const biografia = path.resolve(__dirname, '..', '..', 'biografia', 'index.html');
-        res.sendFile(biografia , (err) => {
-            if (err){
-                console.log(error.message)
-        console.error('Error:', error);
-        const errorPage = path.resolve(__dirname, '..', '..', 'error_page', 'index.html');
-        res.status(500).sendFile(errorPage);
-            }
-        });
+        const response = await fetch('https://8074ff-53.myshopify.com/');
+        if (response.ok) {
+            res.redirect('https://8074ff-53.myshopify.com/');
+        } else {
+            res.status(500).send('Error: No se pudo acceder a la página externa');
+        }
     } catch (error) {
-        console.log(error.message)
-        console.error('Error:', error);
         const errorPage = path.resolve(__dirname, '..', '..', 'error_page', 'index.html');
+        const errorPageCSS = path.resolve(__dirname, '..', '..', 'error_page', 'assets_error');
+        console.log(errorPage)
+        console.log(errorPageCSS)
         res.status(500).sendFile(errorPage);
     }
 };
