@@ -22,6 +22,8 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/img/favicon.png">
 
+
+
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
@@ -31,6 +33,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/plugins.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="assets/css/testimonial.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/clients.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/languaje.css"> -->
     <!-- Swiper CSS -->
     <!-- <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -79,22 +83,46 @@
 
 
                 <!-- MENU ITEMS LIST -->
-                <ul class="navigation-items nav navbar-nav navbar-right">
+                <ul class="navigation-items nav navbar-nav navbar-right translate-content">
 
 
-                    <li class="current"><a href="#intro">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#service">Services</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#clients">Clients</a></li>
-                    <li><a href="#contact">Contact</a></li>
-
-
+                    <li class="current"><a href="#intro">Inicio</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#service">Servicios</a></li>
+                    <li><a href="#work">Proyectos</a></li>
+                    <li><a href="#clients">Clientes</a></li>
+                    <li><a href="#contact">Contacto</a></li>
                 </ul>
                 <!-- /MENU ITEMS LIST -->
 
-
-            </div>
+                <div id='Anutrickz_translateBTN'>
+                    <svg id="translate-icon" aria-hidden='true' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 36 36'>
+                        <path class='clr-i-outline clr-i-outline-path-1'
+                            d='M30 3H14v5h2V5h14c.6 0 1 .4 1 1v11c0 .6-.4 1-1 1H17v7h-5.3L8 27.9V25H5c-.6 0-1-.4-1-1V13c0-.6.4-1 1-1h13v-2H5c-1.7 0-3 1.3-3 3v11c0 1.7 1.3 3 3 3h1v5.1l6.3-5.1H19v-7h11c1.7 0 3-1.3 3-3V6c0-1.7-1.3-3-3-3z'
+                            fill='currentColor'></path>
+                        <path class='clr-i-outline clr-i-outline-path-2'
+                            d='M6.2 22.9h2.4l.6-1.6h3.1l.6 1.6h2.4L11.9 14H9.5l-3.3 8.9zm4.5-6.4l1 3.1h-2l1-3.1z'
+                            fill='currentColor'></path>
+                        <path class='clr-i-outline clr-i-outline-path-3'
+                            d='M20 17c1.1 0 2.6-.3 4-1c1.4.7 3 1 4 1v-2s-1 0-2.1-.4c1.2-1.2 2.1-3 2.1-5.6V8h-3V6h-2v2h-3v2h5.9c-.2 1.8-1 2.9-1.9 3.6c-.6-.5-1.2-1.2-1.6-2.1h-2.1c.4 1.3 1 2.3 1.8 3.1c-1 .4-1.9.4-2.1.4v2z'
+                            fill='currentColor'></path>
+                    </svg>
+                    <div class='hide' id='ATLang_list'>
+                        <ul>
+                            <li class='language-list'>
+                                <a href="#">
+                                    <img class="flag" src="/assets/img/banderas/usa.svg" alt="Icono bandera usa" id="translate-en">
+                                </a>
+                            </li>
+                            <li class='language-list'>
+                                <a href="#">
+                                    <img class="flag" src="/assets/img/banderas/spain.svg" alt="Icono bandera spain" id="translate-es">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
             <!-- /NAVBAR -->
 
 
@@ -112,13 +140,15 @@
 
 
         <!-- CONTAINER MID -->
-        <div class="container-mid text-center">
+        <div class="container-mid text-center ">
 
 
             <!-- ANIMATION CONTAINER -->
-            <div class="animation-container animation-fade-down" data-animation-delay="0">
+            <div class="animation-container animation-fade-down translate-content" data-animation-delay="0">
                 <h1> Convierto tu visión en arte excepcional:<br>tu inspiración, mi lienzo!</h1>
             </div>
+
+
             <!-- /ANIMATION CONTAINER -->
 
             <div style="height: 50px;"></div>
@@ -129,7 +159,7 @@
                 <a href="#about" class="scroll-down smooth-scroll"><i class="fa fa-long-arrow-down"
                         aria-hidden="true"></i></a> -->
 
-                <p class="subline">visita la tienda</p>
+                <p class="subline translate-content">visita la tienda</p>
                 <a href="/tienda/index.html"><i class="fa-solid fa-basket-shopping"></i></a>
 
             </div>
@@ -143,17 +173,39 @@
     </section>
     <!-- /INTRO -->
 
+    <!-- clients -->
+    <div class="container-client">
+        <a href="https://www.mocaamericas.org/" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMBvTh52tNg4ka7VlIFQvLZf4p47uuddX7Pw&s"
+                class="img-fluid" alt="Cliente 1">
+        </a>
+        <a href="https://artepoli.com/" target="_blank">
+            <img src="https://artepoli.com/wp-content/uploads/2020/06/Para-redes-sociales-800.jpg" class="img-fluid"
+                alt="Cliente 2">
+        </a>
+        <a href="https://etragaleria.com/" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiHoPiXbdJibkY02vpBcTqj-4RlOPY3J2IxA&s"
+                class="img-fluid" alt="Cliente 3">
+        </a>
+        <a href="https://www.booking.com/hotel/us/olivares-hill.it.html" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9IkXQRrTAnVxyqLPtc6XnTf4MXCGzrZSDUg&s"
+                class="img-fluid" alt="Cliente 4">
+        </a>
+    </div>
 
+    <!-- End clients -->
 
     <!-- ABOUT -->
     <section id="about" class="white">
+
 
 
         <!-- CONTAINER FLUID -->
         <div class="container-fluid text-center">
 
 
-            <h3 class="headline scroll-animated-from-bottom">Descubra el arte atemporal, elaborado con pasión e
+            <h3 class="headline scroll-animated-from-bottom translate-content">Descubra el arte atemporal, elaborado con
+                pasión e
                 innovación.</h3>
 
 
@@ -167,7 +219,7 @@
                 <!-- /Columna para la imagen -->
 
                 <!-- Columna para el texto -->
-                <div class="col-sm-6 text-left about-item scroll-animated-from-bottom">
+                <div class="col-sm-6 text-left about-item scroll-animated-from-bottom translate-content">
                     <p>Graduado de la Academia de Bellas Artes San Alejandro en La Habana,
                         Cuba, desde 2012, Pérez Fuentes es un consumado pintor y dibujante
                         independiente con más de 25 años de experiencia en el ámbito artístico.
@@ -185,7 +237,7 @@
             <!-- /Columna para el texto -->
             <div style="height: 50px;"></div>
             <!--Mor info -->
-            <a href="/dossier/ELIAN DOSSIER.pdf" target="_blank" class="cta">
+            <a href="/dossier/ELIAN DOSSIER.pdf" target="_blank" class="cta translate-content">
                 <span>Ver dossier ...</span>
                 <svg width="13px" height="10px" viewBox="0 0 13 10">
                     <path d="M1,5 L11,5"></path>
@@ -203,28 +255,28 @@
 
     <!-- SERVICE -->
     <section id="service">
-
-
         <!-- CONTAINER FLUID -->
-        <div class="container-fluid text-center">
+        <div class="container-fluid text-center ">
 
 
-            <h3 class="headline scroll-animated-from-bottom">Servicios Artísticos Exclusivos a tu Alcance</h3>
+            <h3 class="headline scroll-animated-from-bottom translate-content">Servicios Artísticos Exclusivos a tu
+                Alcance</h3>
 
 
             <!-- COLUMN -->
             <div class="col-md-6 col-sm-6 text-left service-item scroll-animated-from-bottom">
                 <a href="/api/galeryLink?grupo=drawing">
-                    <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+                    <i class="fa-solid fa-pencil translate-content" aria-hidden="true"></i>
                 </a>
-                <h5>Dibujo</h5>
+                <h5 class="translate-content">Dibujo</h5>
 
-                <p>Descubre nuestro servicio profesional de dibujo, ofreciendo caricaturas personalizadas,
+                <p class="translate-content">Descubre nuestro servicio profesional de dibujo, ofreciendo caricaturas
+                    personalizadas,
                     retratos detallados, y piezas únicas en estilos surrealistas y personalizados. Cada obra es diseñada
                     para capturar y materializar tus visiones creativas con precisión y arte.</p>
                 <br />
                 <!--Mor info -->
-                <a href="/api/galeryLink?grupo=drawing" class="cta">
+                <a href="/api/galeryLink?grupo=drawing" class="cta translate-content">
                     <span>Detalles</span>
                     <svg width="13px" height="10px" viewBox="0 0 13 10">
                         <path d="M1,5 L11,5"></path>
@@ -241,9 +293,10 @@
                 <a href="/api/galeryLink?grupo=paint">
                     <i class="fa-solid fa-paintbrush" aria-hidden="true"></i>
                 </a>
-                <h5>Pintura</h5>
+                <h5 class="translate-content">Pintura</h5>
 
-                <p>Explora nuestro servicio exclusivo de pintura, donde la creatividad se transforma en arte visual.
+                <p class="translate-content">Explora nuestro servicio exclusivo de pintura, donde la creatividad se
+                    transforma en arte visual.
                     Nos especializamos en la creación de caricaturas llenas de vida, retratos realistas, y obras
                     surrealistas
                     que desafían la imaginación. También ofrecemos la posibilidad de colaborar en proyectos de obras
@@ -253,7 +306,7 @@
 
                 <br />
                 <!--Mor info -->
-                <a href="/api/galeryLink?grupo=paint" class="cta">
+                <a href="/api/galeryLink?grupo=paint" class="cta translate-content">
                     <span>Detalles</span>
                     <svg width="13px" height="10px" viewBox="0 0 13 10">
                         <path d="M1,5 L11,5"></path>
@@ -279,7 +332,7 @@
         <div class="container-fluid text-center">
 
 
-            <h3 class="headline scroll-animated-from-bottom">
+            <h3 class="headline scroll-animated-from-bottom translate-content">
                 Obras en Hogares de clientes</h3>
 
 
@@ -299,7 +352,7 @@
 
 
                         <!-- CONTAINER MID -->
-                        <div class="container-mid">
+                        <div class="container-mid translate-content">
 
                             <h5>Olivares Hill</h5>
                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -327,10 +380,10 @@
                             <div class="description">
 
 
-                                <h3>Estudio y Hotel Olivares Hill</h3>
-                                <p class="subline">Oleo sobre Lienzo</p>
+                                <h3 class="translate-content">Estudio y Hotel Olivares Hill</h3>
+                                <p class="subline translate-content">Oleo sobre Lienzo</p>
 
-                                <p>La habitación en <a
+                                <p class="translate-content">La habitación en <a
                                         href='https://es-l.airbnb.com/rooms/553541540670670897?check_out=2024-06-07&viralityEntryPoint=1&unique_share_id=F8F5E7A0-0CC1-40BB-87A1-CA98217B92A7&slcid=13ebd029c8804e43a02aee66c31564fe&s=76&feature=share&adults=1&check_in=2024-06-02&channel=native&slug=RvXCyZ7H&source_impression_id=p3_1716005317_5%2B8yixedwGjMitf%2F'
                                         target='_blank' style='color: #0000ff; text-decoration: underline;'>Olivares
                                         Hill</a> , un encantador estudio-hotel,
@@ -341,7 +394,7 @@
                                     cuidadosamente colocadas. Esta combinación crea una atmósfera cálida
                                     y armoniosa que invita a relajarse y disfrutar del entorno.</p>
 
-                                <p><a href='https://es-l.airbnb.com/rooms/553541540670670897?check_out=2024-06-07&viralityEntryPoint=1&unique_share_id=F8F5E7A0-0CC1-40BB-87A1-CA98217B92A7&slcid=13ebd029c8804e43a02aee66c31564fe&s=76&feature=share&adults=1&check_in=2024-06-02&channel=native&slug=RvXCyZ7H&source_impression_id=p3_1716005317_5%2B8yixedwGjMitf%2F'
+                                <p class="translate-content"><a href='https://es-l.airbnb.com/rooms/553541540670670897?check_out=2024-06-07&viralityEntryPoint=1&unique_share_id=F8F5E7A0-0CC1-40BB-87A1-CA98217B92A7&slcid=13ebd029c8804e43a02aee66c31564fe&s=76&feature=share&adults=1&check_in=2024-06-02&channel=native&slug=RvXCyZ7H&source_impression_id=p3_1716005317_5%2B8yixedwGjMitf%2F'
                                         target='_blank' style='color: #0000ff; text-decoration: underline;'>Olivares
                                         Hill</a> ofrece una experiencia única al combinar el confort del hogar
                                     con el lujo de una galería de arte. El cuadro de Elian Perez Fuentes no solo
@@ -380,9 +433,9 @@
 
 
                         <!-- CONTAINER MID -->
-                        <div class="container-mid">
+                        <div class="container-mid ">
 
-                            <h5>Coleccionista privado</h5>
+                            <h5 class="translate-content">Coleccionista privado</h5>
                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 
                         </div>
@@ -405,20 +458,20 @@
 
 
                             <!-- DESCRIPTION -->
-                            <div class="description">
+                            <div class="description ">
 
 
-                                <h3>Hogar de Coleccionista Privado</h3>
-                                <p class="subline">Oleo sobre Lienzo</p>
+                                <h3 class="translate-content">Hogar de Coleccionista Privado</h3>
+                                <p class="subline translate-content">Oleo sobre Lienzo</p>
 
-                                <p>Esta imagen muestra una elegante obra de arte de Elian Perez Fuentes en la pared del
+                                <p class="translate-content">Esta imagen muestra una elegante obra de arte de Elian Perez Fuentes en la pared del
                                     hogar de un coleccionista privado. El cuadro, con su composición rica en detalles
                                     y tonos oscuros, aporta una sensación de profundidad y sofisticación al espacio.
                                     La disposición minimalista del entorno, con muebles de madera clara y una lámpara
                                     de pie moderna, resalta aún más la belleza del cuadro. Este equilibrio entre arte
                                     y decoración crea un ambiente sereno y refinado</p>
 
-                                <p>El hogar de este coleccionista se convierte en un santuario de arte con la
+                                <p class="translate-content">El hogar de este coleccionista se convierte en un santuario de arte con la
                                     incorporación de esta pieza de Elian Perez Fuentes. La textura y los colores de la
                                     pintura se integran perfectamente con el suelo de madera y las paredes de tono
                                     neutro,
@@ -458,9 +511,9 @@
 
 
                         <!-- CONTAINER MID -->
-                        <div class="container-mid">
+                        <div class="container-mid ">
 
-                            <h5>Olivares Hill</h5>
+                            <h5 class="translate-content">Olivares Hill</h5>
                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 
                         </div>
@@ -486,10 +539,10 @@
                             <div class="description">
 
 
-                                <h3>Estudio y Hotel Olivares Hill</h3>
-                                <p class="subline">Oleo sobre Lienzo</p>
+                                <h3 class="translate-content">Estudio y Hotel Olivares Hill</h3>
+                                <p class="subline translate-content">Oleo sobre Lienzo</p>
 
-                                <p>En <a href='https://es-l.airbnb.com/rooms/553541540670670897?check_out=2024-06-07&viralityEntryPoint=1&unique_share_id=F8F5E7A0-0CC1-40BB-87A1-CA98217B92A7&slcid=13ebd029c8804e43a02aee66c31564fe&s=76&feature=share&adults=1&check_in=2024-06-02&channel=native&slug=RvXCyZ7H&source_impression_id=p3_1716005317_5%2B8yixedwGjMitf%2F'
+                                <p class="translate-content">En <a href='https://es-l.airbnb.com/rooms/553541540670670897?check_out=2024-06-07&viralityEntryPoint=1&unique_share_id=F8F5E7A0-0CC1-40BB-87A1-CA98217B92A7&slcid=13ebd029c8804e43a02aee66c31564fe&s=76&feature=share&adults=1&check_in=2024-06-02&channel=native&slug=RvXCyZ7H&source_impression_id=p3_1716005317_5%2B8yixedwGjMitf%2F'
                                         target='_blank' style='color: #0000ff; text-decoration: underline;'>Olivares
                                         Hill</a> , un estudio-hotel encantador, cada habitación está diseñada para ser
                                     un refugio de arte y confort. Los vibrantes cuadros de Elian Perez Fuentes adornan
@@ -501,7 +554,7 @@
                                     arte,
                                     haciendo de este lugar un oasis de tranquilidad y belleza.</p>
 
-                                <p><a href='https://es-l.airbnb.com/rooms/553541540670670897?check_out=2024-06-07&viralityEntryPoint=1&unique_share_id=F8F5E7A0-0CC1-40BB-87A1-CA98217B92A7&slcid=13ebd029c8804e43a02aee66c31564fe&s=76&feature=share&adults=1&check_in=2024-06-02&channel=native&slug=RvXCyZ7H&source_impression_id=p3_1716005317_5%2B8yixedwGjMitf%2F'
+                                <p class="translate-content"><a href='https://es-l.airbnb.com/rooms/553541540670670897?check_out=2024-06-07&viralityEntryPoint=1&unique_share_id=F8F5E7A0-0CC1-40BB-87A1-CA98217B92A7&slcid=13ebd029c8804e43a02aee66c31564fe&s=76&feature=share&adults=1&check_in=2024-06-02&channel=native&slug=RvXCyZ7H&source_impression_id=p3_1716005317_5%2B8yixedwGjMitf%2F'
                                         target='_blank' style='color: #0000ff; text-decoration: underline;'>Olivares
                                         Hill</a> ofrece una experiencia única al combinar el confort de un hogar con la
                                     sofisticación
@@ -544,9 +597,9 @@
 
 
                         <!-- CONTAINER MID -->
-                        <div class="container-mid">
+                        <div class="container-mid ">
 
-                            <h5>Aficionado al Arte.</h5>
+                            <h5 class="translate-content">Aficionado al Arte.</h5>
                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 
                         </div>
@@ -569,13 +622,13 @@
 
 
                             <!-- DESCRIPTION -->
-                            <div class="description">
+                            <div class="description ">
 
 
-                                <h3>Hogar de aficionado al arte</h3>
-                                <p class="subline">Oleo sobre Lienzo</p>
+                                <h3 class="translate-content">Hogar de aficionado al arte</h3>
+                                <p class="subline translate-content">Oleo sobre Lienzo</p>
 
-                                <p>En el hogar de un comprador privado, esta impresionante pintura de Elian Perez
+                                <p class="translate-content">En el hogar de un comprador privado, esta impresionante pintura de Elian Perez
                                     Fuentes aporta una sensación
                                     de serenidad y belleza. El cuadro, que representa un grupo de majestuosas ballenas
                                     en un mar de tonos azules,
@@ -585,7 +638,7 @@
                                     decoración transforma el
                                     espacio en un santuario de tranquilidad y estética refinada.</p>
 
-                                <p>Poseer una obra de Elian Perez Fuentes es tener una ventana a un mundo lleno de vida
+                                <p class="translate-content">Poseer una obra de Elian Perez Fuentes es tener una ventana a un mundo lleno de vida
                                     y movimiento. En este
                                     hogar, la pintura se integra perfectamente con los elementos decorativos, destacando
                                     tanto por su temática
@@ -597,7 +650,7 @@
                                     cualquier entorno,
                                     creando un lugar único y especial.</p>
 
-                                <p>La Imagen es publicada con el consentimiento del propietario actual.</p>
+                                <p class="translate-content">La Imagen es publicada con el consentimiento del propietario actual.</p>
 
 
                             </div>
@@ -628,9 +681,9 @@
 
 
                         <!-- CONTAINER MID -->
-                        <div class="container-mid">
+                        <div class="container-mid ">
 
-                            <h5>Comprador Ocasional de Arte</h5>
+                            <h5 class="translate-content">Comprador Ocasional de Arte</h5>
                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 
                         </div>
@@ -653,13 +706,13 @@
 
 
                             <!-- DESCRIPTION -->
-                            <div class="description">
+                            <div class="description ">
 
 
-                                <h3>Hogar del comprador ocacional de arte</h3>
-                                <p class="subline">Carbon sobre Carton</p>
+                                <h3 class="translate-content">Hogar del comprador ocacional de arte</h3>
+                                <p class="subline translate-content">Carbon sobre Carton</p>
 
-                                <p>En el hogar de un aficionado al arte, este dibujo de Elian Perez Fuentes añade un
+                                <p class="translate-content">En el hogar de un aficionado al arte, este dibujo de Elian Perez Fuentes añade un
                                     toque
                                     de elegancia y contemplación. La obra, con su delicado trazo y sutiles sombras,
                                     captura
@@ -671,7 +724,7 @@
                                     arte y la
                                     vida cotidiana se encuentran en perfecta armonía.</p>
 
-                                <p>Poseer una obra de Elian Perez Fuentes, como este exquisito dibujo, es tener un
+                                <p class="translate-content">Poseer una obra de Elian Perez Fuentes, como este exquisito dibujo, es tener un
                                     pedazo de su
                                     visión artística en tu hogar. La combinación de detalles minuciosos y una expresión
                                     profunda
@@ -683,7 +736,7 @@
                                     creando un
                                     ambiente cálido y reflexivo que invita a la tranquilidad y la admiración.</p>
 
-                                <p>La Imagen es publicada con el consentimiento del propietario actual.</p>
+                                <p class="translate-content">La Imagen es publicada con el consentimiento del propietario actual.</p>
 
 
                             </div>
@@ -720,43 +773,43 @@
 
 
         <!-- CONTAINER FLUID -->
-        <div class="container-fluid text-center">
-            <h3 class="headline scroll-animated-from-bottom">What Clients say about us.</h3>
+        <div class="container-fluid text-center translate-content">
+            <h3 class="headline scroll-animated-from-bottom">Qué dicen nuestros clientes sobre nosotros.</h3>
         </div>
 
-        <div class="testimonial mySwiper scroll-animated-from-bottom container">
-            <div class="testi-content swiper-wrapper">
-                <div class="slide swiper-slide">
+        <div class="testimonial mySwiper scroll-animated-from-bottom container ">
+            <div class="testi-content swiper-wrapper ">
+                <div class="slide swiper-slide ">
                     <img src="images/img1.jpg" alt="" class="image" />
-                    <p>
+                    <p class="translate-content">
                         👏🏻👏🏻mago con un pincel 🖌️ 😍❤️
                     </p>
 
                     <i class="bx bxs-quote-alt-left quote-icon"></i>
 
-                    <div class="details">
+                    <div class="details ">
                         <span class="name"><a href="https://www.instagram.com/lau__sb/" hover:
-                                colortarget="_blank">@lau__sb</a></span>
+                                colortarget="_blank">Instagram : @lau__sb</a></span>
                         <span class="job"></span>
                     </div>
                 </div>
                 <div class="slide swiper-slide">
                     <img src="images/img2.jpg" alt="" class="image" />
-                    <p>
+                    <p class="translate-content">
                         Mi artista favorito y el más guapo también🥰😘❤️
                     </p>
 
                     <i class="bx bxs-quote-alt-left quote-icon"></i>
 
                     <div class="details">
-                        <span class="name"><a href="https://www.instagram.com/sogniella/"
-                                target="_blank">@sogniella</a></span>
+                        <span class="name"><a href="https://www.instagram.com/sogniella/" target="_blank">Instagram :
+                                @sogniella</a></span>
                         <span class="job"></span>
                     </div>
                 </div>
                 <div class="slide swiper-slide">
                     <img src="images/img3.jpg" alt="" class="image" />
-                    <p>
+                    <p class="translate-content">
                         Hola 👋, de verdad pasé por tu perfil y me intrigan muchas de tus obras,
                         son únicas, me gustaría comprar algunas de tus obras. Espero obtener una respuesta positiva de
                         usted pronto.
@@ -767,14 +820,14 @@
                     <i class="bx bxs-quote-alt-left quote-icon"></i>
 
                     <div class="details">
-                        <span class="name"><a href="https://www.instagram.com/sandytowel341/"
-                                target="_blank">@sandytowel341</a></span>
-                        <span class="job">Landscape Architect.</span>
+                        <span class="name"><a href="https://www.instagram.com/sandytowel341/" target="_blank">Instagram
+                                : @sandytowel341</a></span>
+                        <span class="job translate-content">Arquitecto Paisajista.</span>
                     </div>
                 </div>
                 <div class="slide swiper-slide">
                     <img src="images/img4.jpg" alt="" class="image" />
-                    <p>
+                    <p class="translate-content">
                         Hola, perdón por el enfoque aleatorio, vale, tu increíble arte apareció en mi explorador y,
                         a decir verdad, es una obra de arte increíble... Me encantaría comprar tus obras de arte como
                         NFt,
@@ -785,36 +838,36 @@
 
                     <div class="details">
                         <span class="name"><a href="https://www.instagram.com/alex_litster011/"
-                                target="_blank">@alex_litster011</a></span>
+                                target="_blank">Instagram : @alex_litster011</a></span>
                         <span class="job"></span>
                     </div>
                 </div>
                 <div class="slide swiper-slide">
                     <img src="images/img5.jpg" alt="" class="image" />
-                    <p>
+                    <p class="translate-content">
                         Trabajo increíble, querido. Me encanta la singularidad que pones en tu trabajo. Sigue creando 🙌
                     </p>
 
                     <i class="bx bxs-quote-alt-left quote-icon"></i>
 
                     <div class="details">
-                        <span class="name"><a href="https://www.instagram.com/sketchadayy/"
-                                target="_blank">@sketchadayy</a></span>
-                        <span class="job">Artista e Ingeniero de software</span>
+                        <span class="name"><a href="https://www.instagram.com/sketchadayy/" target="_blank">Instagram :
+                                @sketchadayy</a></span>
+                        <span class="job translate-content">Artista e Ingeniero de software</span>
                     </div>
                 </div>
                 <div class="slide swiper-slide">
                     <img src="images/img6.jpg" alt="" class="image" />
-                    <p>
+                    <p class="translate-content">
                         Mi hermano solo puedo decir que eres grande!!
                     </p>
 
                     <i class="bx bxs-quote-alt-left quote-icon"></i>
 
                     <div class="details">
-                        <span class="name"><a href="https://www.instagram.com/djleodecuba/"
-                                target="_blank">@djleodecuba</a></span>
-                        <span class="job">Artista</span>
+                        <span class="name"><a href="https://www.instagram.com/djleodecuba/" target="_blank">Instagram :
+                                @djleodecuba</a></span>
+                        <span class="job translate-content">Artista</span>
                     </div>
                 </div>
             </div>
@@ -843,7 +896,8 @@
         <div class="container-fluid text-center">
 
 
-            <h3 class="headline scroll-animated-from-bottom">Get in touch with us.</h3>
+            <h3 class="headline scroll-animated-from-bottom translate-content">Ponte en contacto con nosotros.
+            </h3>
 
 
             <!-- CONTACT LIST -->
@@ -858,7 +912,7 @@
                     <div class="contact-type email " id="btn-abrir-popup">
 
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        <h6 class="email-text"><span>Email</span></h6>
+                        <h6 class="email-text"><span>E-mail</span></h6>
 
                     </div>
                     <!-- /CONTACT TYPE -->
@@ -877,7 +931,7 @@
                     <!-- CONTACT TYPE -->
                     <div class="contact-type">
                         <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                        <h6>Phone</h6>
+                        <h6 class="translate-content">Teléfono</h6>
 
                     </div>
                     <!-- /CONTACT TYPE -->
@@ -897,7 +951,7 @@
                     <!-- CONTACT TYPE -->
                     <div class="contact-type">
                         <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                        <h6>Address</h6>
+                        <h6 class="translate-content">Dirección</h6>
 
                     </div>
                     <!-- /CONTACT TYPE -->
@@ -924,18 +978,18 @@
     <div class="overlay" id="overlay">
         <div class="popup" id="popup">
             <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-            <h3>CONTACTAME</h3>
-            <h4>y podre hacer arte con tu idea.</h4>
+            <h3 class="translate-content">CONTACTAME</h3>
+            <h4 class="translate-content">y podre hacer arte con tu idea.</h4>
             <form role="form" method="POST" id="myForm">
                 <div class="contenedor-inputs">
                     <input type="email" placeholder="Tu correo" name="email" id="email" title="Introduce tu email"
                         required>
-                    <input type="text" placeholder="Asunto" name="subject" id="subject"
+                    <input type="text" placeholder="Tema" name="subject" id="subject"
                         title="Introduce el motivo de tu contacto" required>
                     <textarea type="message" placeholder="Mensaje" name="message" id="message"
                         title="Introduce tu mensaje" required></textarea>
                 </div>
-                <button type="submit" class="btn-submit" id="sendMessage">Enviar</button>
+                <button type="submit" class="btn-submit translate-content" id="sendMessage">Enviar</button>
             </form>
         </div>
     </div>
@@ -963,8 +1017,10 @@
 
                     <!-- <p>© 2024 Elian perez Fuentes | Design by <a href="https://templatefoundation.com">Template Foundation</a>
                     </p> -->
-                    <p>© 2024 Elian perez Fuentes | Derechos Reservados</p>
-
+                    <div id="derechos">
+                        <p>© 2024 Elian perez Fuentes</p>
+                        <p class="translate-content">| Derechos Reservados</p>
+                    </div>
                 </div>
                 <!-- /COLUMN -->
 
@@ -1029,12 +1085,15 @@
     <!-- JAVASCRIPTS -->
     <script type="text/javascript" src="assets/js/plugins.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/translate.js"></script>
     <script src="/assets/js/popup.js"></script>
 
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="assets/js/testimonial.js"></script>
+
+
 
 
 </body>

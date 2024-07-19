@@ -261,3 +261,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// Toggle lista idiomas
+document.addEventListener('DOMContentLoaded', function() {
+  // Obtener el botón de traducción y el menú desplegable
+  const translateButton = document.getElementById('Anutrickz_translateBTN');
+  const langList = document.getElementById('ATLang_list');
+
+  // Agregar un evento de clic al botón de traducción
+  translateButton.addEventListener('click', function() {
+      // Alternar la clase 'hide' para mostrar/ocultar el menú
+      langList.classList.toggle('hide');
+  });
+
+  // Cerrar el menú si se hace clic fuera de él
+  document.addEventListener('click', function(event) {
+      if (!translateButton.contains(event.target) && !langList.contains(event.target)) {
+          langList.classList.add('hide');
+      }
+  });
+});
+
+

@@ -165,7 +165,7 @@ const sendEmailMethod = async (req, res) => {
         port: process.env.PORT_EMAIL,
         secure: true, // Use `true` for port 465, `false` for all other ports
         auth: {
-            Testimonios: process.env.TO_EMAIL_ADDRESS,
+            user: process.env.TO_EMAIL_ADDRESS,
             pass: process.env.NAME_APP_PASS,
         },
     });
@@ -192,21 +192,47 @@ const sendEmailMethod = async (req, res) => {
 
 
 
-// Crear un nuevo usuario
+// Crear un nuevo testimonio
 const createTestimonios = async (req, res) => {
-  try {
-    const testimonios = new Testimonio(req.body);
-    await testimonios.save();
-    res.status(201).send(Testimonio);
-  } catch (error) {
-    res.status(400).send(error);
-  }
-};
+    try {
+      console.log('Datos recibidos para nuevo testimonio:', req.body);
+      const testimonio = new Testimonio(req.body);
+      await testimonio.save();
+      res.status(201).send(testimonio);
+    } catch (error) {
+      console.error('Error al crear testimonio:', error);
+      res.status(400).send({ code: error.code, message: error.message });
+    }
+  };
+
+  // Eliminar un testimonio por su id
+  const deleteTestimonio = async (req, res) => {
+    try {
+        console.log("testimonio eliminar")
+      const { id, email } = req.body; // Se esperan `id` y `email` en el cuerpo de la solicitud
+  
+      const testimonio = await Testimonio.findById(id);
+      if (!testimonio) {
+        return res.status(404).send({ message: 'Testimonio no encontrado' });
+      }
+  
+      if (testimonio.email !== email) {
+        return res.status(403).send({ message: 'No autorizado para eliminar este testimonio' });
+      }
+  
+      await Testimonio.findByIdAndDelete(id);
+      res.status(200).send({ message: 'Testimonio eliminado' });
+    } catch (error) {
+      console.error('Error al eliminar testimonio:', error);
+      res.status(500).send(error);
+    }
+  };
 
 // Obtener todos los usuarios
 const getTestimonios = async (req, res) => {
   try {
     const testimonios = await Testimonio.find();
+    console.log('Testimonios recuperados:', testimonios);
     res.status(200).send(testimonios);
   } catch (error) {
     console.log(error.message)
@@ -228,5 +254,6 @@ module.exports = {
     tiendaLink,
     createTestimonios,
     getTestimonios,
+    deleteTestimonio,
     // biografiaLink,
 };

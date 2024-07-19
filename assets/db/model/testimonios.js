@@ -8,5 +8,5 @@ const TestimonioSchema = new Schema({
     email: { type: String, required: true },
 });
 
-const Testimonio = mongoose.model('testimonios', TestimonioSchema);
+const Testimonio = mongoose.model('Testimonio', TestimonioSchema);
 module.exports = Testimonio;

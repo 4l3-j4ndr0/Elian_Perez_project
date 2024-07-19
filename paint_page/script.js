@@ -19,25 +19,40 @@ let swiper =new Swiper(".mySwiper",{
 });
 
 
+
 // Obtiene el modal
-let modal = document.getElementById("imageModal");
+let modal = document.getElementById("imageModal"); // Selecciona el elemento modal por su ID
 
 // Obtiene la imagen e inserta dentro del modal, y añade el texto de caption
-let modalImg = document.getElementById("img01");
-let captionText = document.getElementById("caption");
-let closeBtn = document.getElementsByClassName("close")[0];
-let prevBtn = document.getElementsByClassName("prev")[0];
-let nextBtn = document.getElementsByClassName("next")[0];
-let currentIndex = 0;
-let angleImages = [];
+let modalImg = document.getElementById("img01"); // Selecciona el elemento de la imagen dentro del modal por su ID
+let captionText = document.getElementById("caption"); // Selecciona el elemento de texto dentro del modal por su ID
+let closeBtn = document.getElementsByClassName("close")[0]; // Selecciona el primer elemento con la clase "close" (botón de cerrar)
+let prevBtn = document.getElementsByClassName("prev")[0]; // Selecciona el primer elemento con la clase "prev" (botón de imagen anterior)
+let nextBtn = document.getElementsByClassName("next")[0]; // Selecciona el primer elemento con la clase "next" (botón de imagen siguiente)
+let currentIndex = 0; // Índice de la imagen actual
+let angleImages = []; // Array para almacenar las imágenes de diferentes ángulos
+
+// Selecciona todas las imágenes dentro de los elementos con la clase "swiper-slide"
 document.querySelectorAll('.swiper-slide img').forEach(img => {
-    img.onclick = function(){
-        modal.style.display = "block";
-        angleImages = this.getAttribute('data-angles').split(',');
-        currentIndex = 0; // Mostrar la imagen principal primero
-        showImage(currentIndex);
-        captionText.innerHTML = `<p> Titulo: ${this.dataset.title.trim()} <br> Tecnica: ${this.dataset.tecnica.trim()} <br> Dimenciones: ${this.dataset.medidas.trim()} <br> Expuesto: ${this.dataset.caption.trim()}</p>`;
-            document.addEventListener('keydown', handleKeyDown); // Añadir evento al abrir el modal
+    // Añade un evento de clic a cada imagen
+    img.onclick = async function() {
+        modal.style.display = "block"; // Muestra el modal
+        angleImages = this.getAttribute('data-angles').split(','); // Obtiene los diferentes ángulos de imagen desde el atributo data-angles y los divide en un array
+        modalImg.src = this.src; // Establece la fuente de la imagen del modal a la imagen seleccionada
+        currentIndex = 0; // Inicializa el índice de la imagen actual a 0 para mostrar la imagen principal primero
+        showImage(currentIndex); // Muestra la imagen actual basada en el índice
+
+        // Traduce los atributos de datos
+        const title = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.title.trim()); // Traduce el título
+        const tecnica = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.tecnica.trim()); // Traduce la técnica
+        const medidas = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.medidas.trim()); // Traduce las medidas
+        const caption = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.caption.trim()); // Traduce el caption
+
+        // Traduce las etiquetas de texto estáticas
+        const [titleLabel, tecnicaLabel, medidasLabel, captionLabel] = await translateStaticText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage);
+
+        // Actualiza el contenido del modal con los textos traducidos
+        captionText.innerHTML = `<p>${titleLabel} ${title} <br> ${tecnicaLabel} ${tecnica} <br> ${medidasLabel} ${medidas} <br> ${captionLabel} ${caption}</p>`;
     }
 });
 

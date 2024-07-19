@@ -48,4 +48,28 @@ GET http://localhost:3003/api/getTestimonios HTTP/1.1
 Content-Type: application/json
 
 
+###
 
+// crear nuevo testimonio
+POST  http://localhost:3003/api/createTestimonios HTTP/1.1
+Content-Type: application/json
+
+    {
+      "comentario": "nuevo testimonio",
+       "nombre": "alejandro",
+       "ocupacion": "genio",
+       "email": "alejo@gmail.com"
+    }
+
+###
+
+###
+
+DELETE http://localhost:3003/api/deleteTestimonio HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "66979ac39b68b7d3dabdfca7",
+  "email": "alejo@gmail.com"
+}
+###

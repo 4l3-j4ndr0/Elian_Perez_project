@@ -18,20 +18,30 @@ let swiper =new Swiper(".mySwiper",{
 });
 
 
-// Obtiene el modal
+// Modal functionality with translation
 let modal = document.getElementById("imageModal");
-
-// Obtiene la imagen e inserta dentro del modal, y añade el texto de caption
 let modalImg = document.getElementById("img01");
 let captionText = document.getElementById("caption");
+
 document.querySelectorAll('.swiper-slide img').forEach(img => {
-    img.onclick = function(){
+    img.onclick = async function() {
         modal.style.display = "block";
         modalImg.src = this.src;
-        captionText.innerHTML = `<p> Titulo: ${this.dataset.title.trim()} <br> Tecnica: ${this.dataset.tecnica.trim()} <br> Dimenciones: ${this.dataset.medidas.trim()} <br> Expuesto: ${this.dataset.caption.trim()}</p>`;
-        // captionText.innerHTML = this.alt;
+
+        // Translate the data attributes
+        const title = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.title.trim());
+        const tecnica = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.tecnica.trim());
+        const medidas = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.medidas.trim());
+        const caption = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.caption.trim());
+
+        // Translate the static text labels
+        const [titleLabel, tecnicaLabel, medidasLabel, captionLabel] = await translateStaticText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage);
+
+        // Update the modal content
+        captionText.innerHTML = `<p>${titleLabel} ${title} <br> ${tecnicaLabel} ${tecnica} <br> ${medidasLabel} ${medidas} <br> ${captionLabel} ${caption}</p>`;
     }
 });
+
 
 // Obtiene el elemento <span> que cierra el modal
 let span = document.getElementsByClassName("close")[0];

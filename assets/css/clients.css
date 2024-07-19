@@ -1,0 +1,53 @@
+.clients-section {
+    text-align: center; /* Centra el texto dentro de la sección */
+    margin-bottom: 20px; /* Espacio inferior entre el texto y el contenedor de imágenes */
+    /* background-color: #f4f6f8 */
+}
+
+.container-client {
+    display: grid; /* Usa una grid layout para el contenedor */
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de igual tamaño por defecto */
+    gap: 20px; /* Espacio entre los elementos de la grid */
+    width: 100%; /* El contenedor ocupa todo el ancho de la pantalla */
+    padding: 20px; /* Espacio interno alrededor del contenido del contenedor */
+    background-color: #f4f6f8; /* Fondo claro similar al de la imagen */
+    justify-items: center; /* Centra los elementos horizontalmente dentro de cada celda */
+    align-items: center; /* Centra los elementos verticalmente dentro de cada celda */
+}
+
+.container-client a {
+    display: inline-block; /* Los enlaces se comportan como elementos en línea pero con capacidad de bloque */
+}
+
+.container-client img {
+    max-width: 100%; /* El ancho máximo de las imágenes es el 100% del contenedor padre */
+    height: 10rem; /* Altura fija para las imágenes */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de zoom */
+    border-radius: 50%; /* Hace que las imágenes sean circulares */
+}
+
+.container-client img:hover {
+    transform: scale(1.1); /* Aplica un pequeño zoom al hacer hover */
+}
+
+/* Media queries para pantallas medianas */
+@media (max-width: 768px) {
+    .container-client {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+
+    .container-client img {
+        max-width: 80px; /* Ajusta el tamaño máximo de las imágenes */
+    }
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 480px) {
+    .container-client {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+    }
+
+    .container-client img {
+        max-width: 100px; /* Ajusta el tamaño máximo de las imágenes */
+    }
+}

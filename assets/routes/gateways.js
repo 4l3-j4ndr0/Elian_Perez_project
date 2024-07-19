@@ -31,6 +31,8 @@ router.post('/send-email', gatewaysController.sendEmailMethod);
 router.post('/createTestimonios', gatewaysController.createTestimonios);
 //mostrar todos los comentarios
 router.get('/getTestimonios', gatewaysController.getTestimonios);
+//eliminar un comentarios
+router.delete('/deleteTestimonio', gatewaysController.deleteTestimonio);
 
 
 module.exports = router;
