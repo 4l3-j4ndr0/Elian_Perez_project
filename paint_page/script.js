@@ -47,12 +47,13 @@ document.querySelectorAll('.swiper-slide img').forEach(img => {
         const tecnica = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.tecnica.trim()); // Traduce la técnica
         const medidas = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.medidas.trim()); // Traduce las medidas
         const caption = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.caption.trim()); // Traduce el caption
+        const tienda = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.tienda); // Traduce el caption
 
         // Traduce las etiquetas de texto estáticas
         const [titleLabel, tecnicaLabel, medidasLabel, captionLabel] = await translateStaticText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage);
 
         // Actualiza el contenido del modal con los textos traducidos
-        captionText.innerHTML = `<p>${titleLabel} ${title} <br> ${tecnicaLabel} ${tecnica} <br> ${medidasLabel} ${medidas} <br> ${captionLabel} ${caption}</p>`;
+        captionText.innerHTML = `<p>${titleLabel} ${title} <br> ${tecnicaLabel} ${tecnica} <br> ${medidasLabel} ${medidas} <br> ${captionLabel} ${caption} <br> ${tienda}</p>`;
     }
 });
 
@@ -105,6 +106,8 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
 
 
 
