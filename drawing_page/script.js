@@ -33,12 +33,13 @@ document.querySelectorAll('.swiper-slide img').forEach(img => {
         const tecnica = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.tecnica.trim());
         const medidas = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.medidas.trim());
         const caption = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.caption.trim());
+        const tienda = await translateText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage, this.dataset.tienda);
 
         // Translate the static text labels
         const [titleLabel, tecnicaLabel, medidasLabel, captionLabel] = await translateStaticText(currentLanguage === 'en' ? 'es' : 'en', currentLanguage);
 
         // Update the modal content
-        captionText.innerHTML = `<p>${titleLabel} ${title} <br> ${tecnicaLabel} ${tecnica} <br> ${medidasLabel} ${medidas} <br> ${captionLabel} ${caption}</p>`;
+        captionText.innerHTML = `<p>${titleLabel} ${title} <br> ${tecnicaLabel} ${tecnica} <br> ${medidasLabel} ${medidas} <br> ${captionLabel} ${caption} <br> ${tienda}</p>`;
     }
 });
 
