@@ -69,9 +69,9 @@ const facebookLink = async (req, res) => {
 
 const tiktokLink = async (req, res) => {
     try { 
-        const response = await fetch('https://www.tiktok.com/t/ZPRTS9NFE/');
+        const response = await fetch('https://www.tiktok.com/@elianperez906?lang=es');
         if (response.ok) {
-            res.redirect('https://www.tiktok.com/t/ZPRTS9NFE/');
+            res.redirect('https://www.tiktok.com/@elianperez906?lang=es');
         } else {
             res.status(500).send('Error: No se pudo acceder a la página externa');
         }
@@ -107,9 +107,9 @@ const tiktokLink = async (req, res) => {
 
 const tiendaLink = async (req, res) => {
     try {
-        const response = await fetch('https://8074ff-53.myshopify.com/');
+        const response = await fetch('https://fuentesartboutique.com/');
         if (response.ok) {
-            res.redirect('https://8074ff-53.myshopify.com/');
+            res.redirect('https://fuentesartboutique.com/');
         } else {
             res.status(500).send('Error: No se pudo acceder a la página externa');
         }
