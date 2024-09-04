@@ -162,13 +162,14 @@ const sendEmailMethod = async (req, res) => {
         port: process.env.PORT_EMAIL,
         secure: true, // Use `true` for port 465, `false` for all other ports
         auth: {
-            user: process.env.TO_EMAIL_ADDRESS,
+            user: process.env.USER_EMAIL_ADDRESS,
             pass: process.env.NAME_APP_PASS,
         },
     });
 
     // Definir el contenido del cuepro para el correo electrónico que deseas enviar
     const mailOptions = {
+        from: `"Fuentes Gallery" <contact@fuentesartboutique.com>`, // Alias que aparecerá como remitente
         to: process.env.TO_EMAIL_ADDRESS,
         subject: subject,
         text: `${message}
