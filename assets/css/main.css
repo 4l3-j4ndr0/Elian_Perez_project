@@ -1271,51 +1271,63 @@ a {
 }
 
 #contact .contact-list {
-    display: inline-block;
-
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas si no caben en una fila */
+    justify-content: space-around; /* Distribuir los elementos equitativamente */
     margin: 0;
-    padding: 3rem 0 0 0;
-
+    padding: 3rem 0;
     list-style: none;
-
     text-align: left;
 }
 
 #contact .contact-list .contact-list-item {
-    margin-bottom: 4rem;
+    flex: 1 1 auto; /* Los elementos ocuparán el espacio disponible de manera equitativa */
+    margin: 0 1rem 2rem 1rem; /* Espaciado entre los elementos */
+    text-align: center;
 }
 
 #contact .contact-list .contact-list-item .contact-type {
-    display: inline-block;
-
-    margin-right: 1.6rem;
-    padding: 0 3.5rem;
-
+    display: inline-flex; /* Asegurar que los elementos estén alineados horizontalmente */
+    align-items: center;
+    padding: 0.5rem 1.5rem;
     border-radius: 3.5rem;
-    background: #13bbbd;
-}
-
-#contact .contact-list .contact-list-item .contact-type i {
-    font-size: 2rem;
-    line-height: 7rem;
-
-    margin-right: .3em;
-}
-
-#contact .contact-list .contact-list-item .contact-type h6 {
-    font-weight: 500;
-
-    margin-right: .3em !important;
-
+    background-color: #13bbbd;
     color: #fff;
 }
 
-#contact .contact-list .contact-list-item h6 {
+#contact .contact-list .contact-list-item .contact-type i {
+    margin-right: 0.5rem; /* Espacio entre el ícono y el texto */
+}
+
+#contact .contact-list .contact-list-item .contact-type h6 {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: #fff;
+}
+
+/* #contact .contact-list .contact-list-item h6 {
     line-height: 6rem;
 
     display: inline-block;
 
     margin: 0;
+} */
+
+@media (max-width: 768px) {
+    #contact .contact-list {
+        flex-direction: column; /* Cambiar los elementos a una columna en pantallas pequeñas */
+        align-items: center;
+    }
+
+    #contact .contact-list .contact-list-item {
+        flex: 1 1 100%; /* Los elementos ocuparán el ancho completo en pantallas pequeñas */
+        margin: 0 0 2rem 0;
+    }
+
+    #contact .contact-list .contact-list-item .contact-type {
+        justify-content: center; /* Centrar los íconos y texto en pantallas pequeñas */
+    }
 }
 
 /* ------------------------- */
