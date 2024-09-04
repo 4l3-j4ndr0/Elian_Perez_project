@@ -1320,17 +1320,44 @@ a {
 
 @media (max-width: 768px) {
     #contact .contact-list {
-        flex-direction: column; /* Cambiar los elementos a una columna en pantallas pequeñas */
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     #contact .contact-list .contact-list-item {
-        flex: 1 1 100%; /* Los elementos ocuparán el ancho completo en pantallas pequeñas */
-        margin: 0 0 2rem 0;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     #contact .contact-list .contact-list-item .contact-type {
-        justify-content: center; /* Centrar los íconos y texto en pantallas pequeñas */
+        display: block;
+        margin-right: 0;
+        margin-bottom: 1rem; /* Separación adicional entre el botón y el texto */
+        padding: 0.5rem 2rem;
+        border-radius: 3.5rem;
+        background: #13bbbd;
+    }
+
+    #contact .contact-list .contact-list-item .contact-type i {
+        font-size: 2rem;
+        line-height: 3rem; /* Ajustamos el tamaño del icono */
+        margin-right: 0;
+    }
+
+    #contact .contact-list .contact-list-item .contact-type h6 {
+        margin: 0;
+        font-size: 1.6rem; /* Ajustamos el tamaño del texto */
+    }
+
+    #contact .contact-list .contact-list-item h6 {
+        line-height: 1.6rem;
+        display: block;
+        margin-top: 1rem;
     }
 }
 
