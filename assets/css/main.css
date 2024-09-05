@@ -1337,7 +1337,7 @@ a {
     #contact .contact-list .contact-list-item .contact-type {
         display: block;
         margin-right: 0;
-        margin-bottom: 1rem; /* Separación adicional entre el botón y el texto */
+        margin-bottom: 2rem; /* Separación adicional entre el botón y el texto */
         padding: 0.5rem 2rem;
         border-radius: 3.5rem;
         background: #13bbbd;
