@@ -84,6 +84,23 @@ const tiktokLink = async (req, res) => {
     }
 };
 
+const pinterestLink = async (req, res) => {
+    try { 
+        const response = await fetch('https://pin.it/1E39U0rGw');
+        if (response.ok) {
+            res.redirect('https://pin.it/1E39U0rGw');
+        } else {
+            res.status(500).send('Error: No se pudo acceder a la página externa');
+        }
+    } catch (error) {
+        const errorPage = path.resolve(__dirname, '..', '..', 'error_page', 'index.html');
+        const errorPageCSS = path.resolve(__dirname, '..', '..', 'error_page', 'assets_error');
+        console.log(errorPage)
+        console.log(errorPageCSS)
+        res.status(500).sendFile(errorPage);
+    }
+};
+
 
 // const biografiaLink =  (req, res) => {
 //     console.log( 'en el endpoint')
@@ -253,5 +270,6 @@ module.exports = {
     createTestimonios,
     getTestimonios,
     deleteTestimonio,
+    pinterestLink,
     // biografiaLink,
 };

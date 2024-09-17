@@ -17,6 +17,8 @@ router.get('/instagramLink', gatewaysController.instagramLink);
 router.get('/facebookLink', gatewaysController.facebookLink);
 // tiktok
 router.get('/tiktokLink', gatewaysController.tiktokLink);
+// pinterest
+router.get('/pinterestLink', gatewaysController.pinterestLink);
 
 // biografia
 // router.get('/biografiaLink', gatewaysController.biografiaLink);
@@ -33,6 +35,8 @@ router.post('/createTestimonios', gatewaysController.createTestimonios);
 router.get('/getTestimonios', gatewaysController.getTestimonios);
 //eliminar un comentarios
 router.delete('/deleteTestimonio', gatewaysController.deleteTestimonio);
+
+
 
 
 module.exports = router;
