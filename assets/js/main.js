@@ -283,3 +283,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// cerrar automaticamente el menu en version movil al tocar alguna opcion
+document.querySelectorAll('.navigation-items a').forEach(link => {
+  link.addEventListener('click', function () {
+    const navbarCollapse = document.querySelector('#navbar');
+    if (navbarCollapse.classList.contains('in') || navbarCollapse.classList.contains('show')) {
+      navbarCollapse.classList.remove('in');
+      navbarCollapse.classList.remove('show');
+    }
+  });
+});
