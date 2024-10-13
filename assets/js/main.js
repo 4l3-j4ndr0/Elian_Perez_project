@@ -94,29 +94,53 @@ jQuery(document).ready(function ($) {
 });
 
 // ######################   change text of button send email   ###################### 
-
-// Esperar a que el DOM se cargue completamente
 document.addEventListener('DOMContentLoaded', function () {
-  // Obtener el contenedor del texto
+  // Botón de email
   var emailSpan = document.querySelector('.email-text span');
+  var originalEmailText = emailSpan.textContent;
 
-  // Guardar el texto original
-  var originalText = emailSpan.textContent;
-
-  // Función para cambiar el texto al pasar el mouse
-  function mouseOver() {
-    emailSpan.textContent = 'Enviar Email';
+  function mouseOverEmail() {
+      emailSpan.textContent = 'Enviar Email';
   }
 
-  // Función para revertir el texto cuando el mouse sale
-  function mouseOut() {
-    emailSpan.textContent = originalText;
+  function mouseOutEmail() {
+      emailSpan.textContent = originalEmailText;
   }
 
-  // Agregar event listeners al contenedor del texto
-  emailSpan.parentNode.addEventListener('mouseover', mouseOver);
-  emailSpan.parentNode.addEventListener('mouseout', mouseOut);
+  emailSpan.parentNode.addEventListener('mouseover', mouseOverEmail);
+  emailSpan.parentNode.addEventListener('mouseout', mouseOutEmail);
+
+  // Botón de teléfono
+  var telefonoDiv = document.querySelector('#btn-llamar h6.translate-content');
+  var originalTelefonoText = telefonoDiv.textContent;
+
+  function mouseOverTelefono() {
+      telefonoDiv.textContent = 'Llamar Ahora';
+  }
+
+  function mouseOutTelefono() {
+      telefonoDiv.textContent = originalTelefonoText;
+  }
+
+  telefonoDiv.addEventListener('mouseover', mouseOverTelefono);
+  telefonoDiv.addEventListener('mouseout', mouseOutTelefono);
+
+  // Botón de dirección
+  var direccionDiv = document.querySelector('#btn-direccion h6.translate-content');
+  var originalDireccionText = direccionDiv.textContent;
+
+  function mouseOverDireccion() {
+      direccionDiv.textContent = 'Ver en mapa';
+  }
+
+  function mouseOutDireccion() {
+      direccionDiv.textContent = originalDireccionText;
+  }
+
+  direccionDiv.addEventListener('mouseover', mouseOverDireccion);
+  direccionDiv.addEventListener('mouseout', mouseOutDireccion);
 });
+
 
 // ######################   SEND MESSAGE   ######################
 document.addEventListener('DOMContentLoaded', function () {

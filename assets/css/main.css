@@ -1246,7 +1246,7 @@ a {
 /** 11. Section --> Contact
 *******************************************************************/
 /* efecto en ciclo del boton de email */
-#contact .contact-list .contact-list-item .contact-type#btn-abrir-popup {
+.ondas {
     animation: botonAnimadoExterno 2s infinite;
 }
 
