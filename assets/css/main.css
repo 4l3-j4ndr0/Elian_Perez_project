@@ -996,6 +996,9 @@ a {
 #work .work-carousel .owl-dots .owl-dot.active {
     border-color: rgba(0, 0, 0, 0);
 }
+#work .work-carousel .work_preview_h3{
+    color: #F8F8F8;
+}
 
 #work .work-carousel .owl-dots .owl-dot:after {
     position: absolute;
